@@ -25,18 +25,6 @@ export default function Home() {
         element.scrollIntoView({behavior: 'smooth', block: 'center'})
     }
 
-    function printScroll(){
-        console.log(window.scrollY)
-
-    }
-
-    useEffect(() => {
-        window.addEventListener('scroll', printScroll)
-        return () => {
-            window.removeEventListener('scroll', printScroll)
-        }
-    }, [])
-
     return (
         <>
             <Head>
