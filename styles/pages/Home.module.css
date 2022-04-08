@@ -7,7 +7,7 @@
     flex-direction: column;
     margin-top: 71px;
     gap: 300px;
-    padding-bottom: 150px;
+    padding-bottom: 300px;
     max-width: 1600px;
 }
 .backgroundImage{
@@ -44,6 +44,9 @@
     position: relative;
     display: flex;
     flex-direction: column;
+}
+.imageContainer{
+    overflow: hidden;
 }
 .image{
     width: 100%;
@@ -214,12 +217,12 @@
 .streamingSolutions{
     display: flex;
     flex-direction: column;
-    align-items: center;    
     z-index: 2;
     gap: 50px;
 }
 .streamingSolutions .textContainer{
     width: 50%;
+    align-self: center;
 }
 .streamingSolutions .imageContainer{
     width: 100%;

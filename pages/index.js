@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import styles from '/styles/pages/Home.module.css'
 import { motion, useTransform, useViewportScroll } from 'framer-motion'
 import Image from 'next/image'
+import { useEffect } from 'react'
 
 export default function Home() {
     const { scrollY } = useViewportScroll()
@@ -11,11 +12,30 @@ export default function Home() {
     const top = useTransform(scrollY, [0, 400], ['35%', '0%'])
     const left = useTransform(scrollY, [0, 400], ['10%', '0%'])
     const opacity = useTransform(scrollY, [0, 400], [1, 0])
+    const affiliateNetworkParallax = useTransform(scrollY, [0, 400, 600, 1000], [0, -100, -150, -200])
+    const affiliateProjectParallax = useTransform(scrollY, [1800, 2400], [0, -200])
+    const socialMediaParallax = useTransform(scrollY, [2700, 2900], [0, -100])
+    const streamingSolutionsImage = useTransform(scrollY, [3800, 4400], ['0%', '60%'])
+    const startupIncubatorImage = useTransform(scrollY, [3700, 4400], ['-100%', '0%'])
+    const streamingSolutionsOpacity = useTransform(scrollY, [2700, 3400, 3600, 4400], [0, 1, 1, 0])
+    const startupIncubatorOpacity = useTransform(scrollY, [3500, 4400], [0, 1])
 
     function handleScroll(){
         const element = document.getElementById('affiliate')
         element.scrollIntoView({behavior: 'smooth', block: 'center'})
     }
+
+    function printScroll(){
+        console.log(window.scrollY)
+
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', printScroll)
+        return () => {
+            window.removeEventListener('scroll', printScroll)
+        }
+    }, [])
 
     return (
         <>
@@ -81,9 +101,14 @@ export default function Home() {
                 </div>
                 {/* Affiliate */}
                 <div id="affiliate" className={styles.affiliateBlock}>
-                    <div className={styles.column}>
+                    <motion.div 
+                        className={styles.column}
+                        style={{
+                            translateY: affiliateNetworkParallax
+                        }}
+                    >
                         <div className={styles.image} />
-                    </div>
+                    </motion.div>
                     <div className={styles.column}>
                         <h1 className={styles.title}>
                             Affiliate
@@ -116,13 +141,23 @@ export default function Home() {
                         aliquam tempore autem nobis hic eius. Magnam, minima? Sint placeat 
                         laudantium exercitationem reiciendis.
                     </span>
-                    <div className={styles.imageContainer}>
+                    <motion.div 
+                        className={styles.imageContainer}
+                        style={{
+                            translateY: affiliateProjectParallax
+                        }}
+                    >
                         <div className={styles.image} />
-                    </div>
+                    </motion.div>
                 </div>
                 {/* Social Media */}
                 <div id="socialMedia" className={styles.socialMedia}>
-                    <div className={styles.column}>
+                    <motion.div 
+                        className={styles.column}
+                        style={{
+                            translateY: socialMediaParallax
+                        }}
+                    >
                         <h1 className={styles.title}>Betting Social Media</h1>
                         <span className={styles.text}>
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -130,7 +165,7 @@ export default function Home() {
                             ex vero dolorum praesentium molestias iste, natus tempore 
                             assumenda officia ab dolorem commodi.
                         </span>
-                    </div>
+                    </motion.div>
                     <div className={styles.column}>
                         <div className={styles.imageContainer}>
                             <div className={styles.image} />
@@ -138,7 +173,13 @@ export default function Home() {
                     </div>
                 </div>
                 {/* Streaming Solutions */}
-                <div id="streamingSolutions" className={styles.streamingSolutions}>
+                <motion.div 
+                    id="streamingSolutions" 
+                    className={styles.streamingSolutions}
+                    style={{
+                        opacity: streamingSolutionsOpacity
+                    }}
+                >
                     <div className={styles.textContainer}>
                         <h2 className={styles.secondaryHeader}>Streaming Projects and Platform</h2>
                         <h1 className={styles.title}>Streaming Solutions</h1>
@@ -151,17 +192,35 @@ export default function Home() {
                             corporis provident possimus.
                         </span>
                     </div>
-                    <div className={styles.imageContainer}>
-                        <div className={styles.image} />
+                    <div 
+                        className={styles.imageContainer}
+                    >
+                        <motion.div 
+                            style={{
+                                translateX: streamingSolutionsImage
+                            }}
+                            className={styles.image} 
+                        />
                     </div>
-                </div>
+                </motion.div>
                 {/* Startup Incubator */}
-                <div id="StartupIncubator" className={styles.startupIncubator}>
+                <motion.div 
+                    id="StartupIncubator" 
+                    className={styles.startupIncubator}
+                    style={{
+                        opacity: startupIncubatorOpacity
+                    }}
+                >
                     <div className={styles.column}>
                         <h2 className={styles.secondaryHeader}>Create In-House</h2>
                         <h1 className={styles.title}>Startup Incubator</h1>
                         <div className={styles.imageContainer}>
-                            <div className={styles.image} />
+                            <motion.div 
+                                className={styles.image} 
+                                style={{
+                                    translateX: startupIncubatorImage
+                                }}
+                            />
                         </div>
                     </div>
                     <div className={styles.column}>
@@ -174,7 +233,7 @@ export default function Home() {
                             voluptatibus amet.
                         </span>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </>
     )
