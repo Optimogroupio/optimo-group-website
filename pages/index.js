@@ -2,13 +2,15 @@ import Head from 'next/head'
 import Header from '../components/Header'
 import styles from '/styles/pages/Home.module.css'
 import { motion, useTransform, useViewportScroll } from 'framer-motion'
+import Image from 'next/image'
 
 export default function Home() {
     const { scrollY } = useViewportScroll()
-    const expandWidth = useTransform(scrollY, [0, 600], ['80vw', '100vw'])
-    const expandHeight = useTransform(scrollY, [0, 600], ['30vh', '100vh'])
-    const top = useTransform(scrollY, [0, 600], ['35%', '0%'])
-    const left = useTransform(scrollY, [0, 600], ['10%', '0%'])
+    const expandWidth = useTransform(scrollY, [0, 400], ['80vw', '100vw'])
+    const expandHeight = useTransform(scrollY, [0, 400], ['30vh', '100vh'])
+    const top = useTransform(scrollY, [0, 400], ['35%', '0%'])
+    const left = useTransform(scrollY, [0, 400], ['10%', '0%'])
+    const opacity = useTransform(scrollY, [0, 400], [1, 0])
 
     return (
         <>
@@ -32,6 +34,23 @@ export default function Home() {
                         left: left
                     }}
                 />
+                <motion.div 
+                    className={styles.scrollDown}
+                    style={{
+                        opacity: opacity
+                    }}
+                >
+                    <span>Scroll</span>
+                    <div>
+                        <Image 
+                            src="/icons/arrow_downward.svg"
+                            alt="Scroll Down"
+                            width={30}
+                            height={30}
+                        />
+                    </div>
+                    <span>Down</span>
+                </motion.div>
             <div className={styles.container}>
                 {/* Hero */}
                 <div className={styles.heroBlock}>
