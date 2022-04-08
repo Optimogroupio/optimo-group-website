@@ -8,6 +8,7 @@
     margin-top: 71px;
     gap: 300px;
     padding-bottom: 150px;
+    max-width: 1600px;
 }
 .backgroundImage{
     position: fixed;
@@ -99,6 +100,35 @@
     align-self: flex-end;
     width: 50%;
 }
+@media screen and (max-width: 1440px){
+    .heroBlock .title{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 1024px){
+    .heroBlock .title{
+        width: 100%;
+        font-size: 48px;
+    }
+    .heroBlock .text{
+        width: 80%;
+    }
+    .heroBlock{
+        gap: 50px;
+    }
+}
+@media screen and (max-width: 768px){
+    .heroBlock .title{
+        width: 100%;
+        font-size: 36px;
+    }
+    .heroBlock .text{
+        width: 80%;
+    }
+    .heroBlock{
+        gap: 50px;
+    }
+}
 /* Affiliate */
 .affiliateBlock{
     display: flex;
@@ -172,6 +202,14 @@
     width: 100%;
     height: 500px;
 }
+@media screen and (max-width: 768px){
+    .socialMedia .column:first-child{
+        width: 60%;
+    }
+    .socialMedia .column:nth-child(2){
+        width: 80%;
+    }
+}
 /* Streaming Solutions */
 .streamingSolutions{
     display: flex;
@@ -186,6 +224,20 @@
 .streamingSolutions .imageContainer{
     width: 100%;
     height: 400px;
+}
+@media screen and (max-width: 1024px){
+    .streamingSolutions .textContainer{
+        width: 90%;
+    }
+    .streamingSolutions .imageContainer{
+        width: 100%;
+        height: 300px;
+    }
+}
+@media screen and (max-width: 768px){
+    .streamingSolutions .textContainer .title{
+        font-size: 48px;
+    }
 }
 /* Startup Incubator */
 .startupIncubator{
@@ -212,4 +264,15 @@
     display: flex;
     width: 100%;
     height: 400px;
+}
+@media screen and (max-width: 768px){
+    .startupIncubator .column:first-child{
+        width: 70%;
+    }
+    .startupIncubator .column:nth-child(2){
+        width: 30%;
+    }
+    .startupIncubator .title{
+        font-size: 48px;
+    }
 }
