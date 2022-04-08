@@ -77,6 +77,23 @@ export default function Home() {
                         <div className={styles.image} />
                     </div>
                 </div>
+                {/* Social Media */}
+                <div className={styles.socialMedia}>
+                    <div className={styles.column}>
+                        <h1 className={styles.title}>Betting Social Media</h1>
+                        <span className={styles.text}>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Amet quibusdam ea quae provident et placeat minus voluptatibus 
+                            ex vero dolorum praesentium molestias iste, natus tempore 
+                            assumenda officia ab dolorem commodi.
+                        </span>
+                    </div>
+                    <div className={styles.column}>
+                        <div className={styles.imageContainer}>
+                            <div className={styles.image} />
+                        </div>
+                    </div>
+                </div>
                 <div/>
             </div>
         </>
