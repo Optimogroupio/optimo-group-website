@@ -22,15 +22,16 @@ export default function Home() {
     const startupIncubatorOpacity = useTransform(scrollY, [3500, 4400, 4600, 5000], [0, 1, 1, 0])
     const projectsParallax = useTransform(scrollY, [5700, 5900], [0, 100])
 
-    function printScroll(){
-        console.log(window.scrollY)
-    }
-        useEffect(() => {
-            window.addEventListener('scroll', printScroll)
-        return () => {
-            window.removeEventListener('scroll', printScroll)
-        }
-    }, [])
+    // function printScroll(){
+    //     console.log(window.scrollY)
+    // }
+    // useEffect(() => {
+    //     window.addEventListener('scroll', printScroll)
+        
+    //     return () => {
+    //         window.removeEventListener('scroll', printScroll)
+    //     }
+    // }, [])
     
 
     function handleScroll(id){
