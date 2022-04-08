@@ -112,7 +112,26 @@ export default function Home() {
                         <div className={styles.image} />
                     </div>
                 </div>
-                <div/>
+                {/* Startup Incubator */}
+                <div className={styles.startupIncubator}>
+                    <div className={styles.column}>
+                        <h2 className={styles.secondaryHeader}>Create In-House</h2>
+                        <h1 className={styles.title}>Startup Incubator</h1>
+                        <div className={styles.imageContainer}>
+                            <div className={styles.image} />
+                        </div>
+                    </div>
+                    <div className={styles.column}>
+                        <span className={styles.text}>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                            Earum blanditiis ipsa repudiandae facere iure similique quo 
+                            quae reprehenderit voluptatem eaque in, culpa voluptatum ut 
+                            dignissimos sequi recusandae cupiditate praesentium animi, 
+                            repellat dolores magni aperiam. At repudiandae excepturi libero 
+                            voluptatibus amet.
+                        </span>
+                    </div>
+                </div>
             </div>
         </>
     )
