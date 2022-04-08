@@ -49,18 +49,23 @@
     height: 100%;
     background-color: var(--highlight-color);
 }
-.scrollDown{
+.scrollDownContainer{
     position: fixed;
     z-index: 999;
     bottom: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.scrollDown{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    margin-right: auto;
-    margin-left: auto;
-    width: 100%;
+    cursor: pointer;
+    width: fit-content;
 }
 .scrollDown div{
     position: relative;

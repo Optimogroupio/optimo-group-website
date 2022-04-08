@@ -12,6 +12,11 @@ export default function Home() {
     const left = useTransform(scrollY, [0, 400], ['10%', '0%'])
     const opacity = useTransform(scrollY, [0, 400], [1, 0])
 
+    function handleScroll(){
+        const element = document.getElementById('affiliate')
+        element.scrollIntoView({behavior: 'smooth', block: 'center'})
+    }
+
     return (
         <>
             <Head>
@@ -35,25 +40,30 @@ export default function Home() {
                     }}
                 />
                 <motion.div 
-                    className={styles.scrollDown}
+                    className={styles.scrollDownContainer}
                     style={{
                         opacity: opacity
                     }}
                 >
-                    <span>Scroll</span>
-                    <div>
-                        <Image 
-                            src="/icons/arrow_downward.svg"
-                            alt="Scroll Down"
-                            width={30}
-                            height={30}
-                        />
+                    <div 
+                        onClick={handleScroll}
+                        className={styles.scrollDown}
+                    >
+                        <span>Scroll</span>
+                        <div>
+                            <Image 
+                                src="/icons/arrow_downward.svg"
+                                alt="Scroll Down"
+                                width={30}
+                                height={30}
+                            />
+                        </div>
+                        <span>Down</span>
                     </div>
-                    <span>Down</span>
                 </motion.div>
             <div className={styles.container}>
                 {/* Hero */}
-                <div className={styles.heroBlock}>
+                <div id="hero" className={styles.heroBlock}>
                     <h1 className={styles.title}>
                         Lorem Ipsum is simply Dummy 
                         Text of <span className={styles.highlight}> The Printing </span>
@@ -71,7 +81,7 @@ export default function Home() {
                     </span>
                 </div>
                 {/* Affiliate */}
-                <div className={styles.affiliateBlock}>
+                <div id="affiliate" className={styles.affiliateBlock}>
                     <div className={styles.column}>
                         <div className={styles.image} />
                     </div>
@@ -94,7 +104,7 @@ export default function Home() {
                     </div>
                 </div>
                 {/* Affiliate project */}
-                <div className={styles.affiliateProject}>
+                <div id="affiliateProject" className={styles.affiliateProject}>
                     <h2 className={styles.secondaryHeader}>Global 10 Projects</h2>
                     <h1 className={styles.title}>Affiliate Project</h1>
                     <span className={styles.text}>
@@ -112,7 +122,7 @@ export default function Home() {
                     </div>
                 </div>
                 {/* Social Media */}
-                <div className={styles.socialMedia}>
+                <div id="socialMedia" className={styles.socialMedia}>
                     <div className={styles.column}>
                         <h1 className={styles.title}>Betting Social Media</h1>
                         <span className={styles.text}>
@@ -129,7 +139,7 @@ export default function Home() {
                     </div>
                 </div>
                 {/* Streaming Solutions */}
-                <div className={styles.streamingSolutions}>
+                <div id="streamingSolutions" className={styles.streamingSolutions}>
                     <div className={styles.textContainer}>
                         <h2 className={styles.secondaryHeader}>Streaming Projects and Platform</h2>
                         <h1 className={styles.title}>Streaming Solutions</h1>
@@ -147,7 +157,7 @@ export default function Home() {
                     </div>
                 </div>
                 {/* Startup Incubator */}
-                <div className={styles.startupIncubator}>
+                <div id="StartupIncubator" className={styles.startupIncubator}>
                     <div className={styles.column}>
                         <h2 className={styles.secondaryHeader}>Create In-House</h2>
                         <h1 className={styles.title}>Startup Incubator</h1>
