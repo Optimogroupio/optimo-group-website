@@ -3,8 +3,16 @@ import Header from '../components/Header'
 import styles from '/styles/pages/Home.module.css'
 import { motion, useTransform, useViewportScroll } from 'framer-motion'
 import Image from 'next/image'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Footer from '../components/Footer'
+
+const words = [
+    'Hello',
+    'Bonjour',
+    'Hola',
+    'Ciao',
+    'Hallo',
+]
 
 export default function Home() {
     const { scrollY } = useViewportScroll()
@@ -21,6 +29,8 @@ export default function Home() {
     const streamingSolutionsOpacity = useTransform(scrollY, [2700, 3400, 3600, 4400], [0, 1, 1, 0])
     const startupIncubatorOpacity = useTransform(scrollY, [3500, 4400, 4600, 5000], [0, 1, 1, 0])
     const projectsParallax = useTransform(scrollY, [5700, 5900], [0, 100])
+    const [heroText, setHeroText] = useState('Hello')
+    let index = 0;
 
     // function printScroll(){
     //     console.log(window.scrollY)
@@ -33,6 +43,17 @@ export default function Home() {
     //     }
     // }, [])
     
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (index === words.length - 1) {
+                clearInterval(interval)
+            }
+            setHeroText(words[index++])
+        }, 2000)
+        return () => {
+            clearInterval(interval)
+        }
+    }, [])
 
     function handleScroll(id){
         const element = document.getElementById(id)
@@ -86,8 +107,8 @@ export default function Home() {
                 {/* Hero */}
                 <div id="hero" className={styles.heroBlock}>
                     <h1 className={styles.title}>
-                        Lorem Ipsum is simply Dummy 
-                        Text of <span className={styles.highlight}> The Printing </span>
+                        Optimal Solutions For: <br/>
+                        <span className={styles.highlight}>{heroText}</span>
                     </h1>
                     <span className={styles.text}>
                         Lorem ipsum dolor, sit amet consectetur
