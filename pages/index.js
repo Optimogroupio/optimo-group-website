@@ -299,7 +299,7 @@ export default function Home() {
                 </div>
                 <div 
                     className={styles.scrollToTop}
-                    onClick={() => window.scrollTo(0, 0)}
+                    onClick={() => handleScroll('hero')}
                 >
                     <Image 
                         src="/icons/arrow_downward.svg"
