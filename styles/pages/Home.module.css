@@ -7,7 +7,6 @@
     flex-direction: column;
     margin-top: 71px;
     gap: 300px;
-    padding-bottom: 300px;
     max-width: 1600px;
 }
 .backgroundImage{
@@ -85,6 +84,21 @@
     font-size: 18px;
     font-weight: 200;
     color: var(--text-color);
+}
+.scrollToTop{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateZ(180deg);
+    height: 40px;
+    width: 40px;
+    border: 1px solid var(--secondary-header-color);
+    border-radius: 100%;
+    left: calc(50% - 20px);
+    bottom: 25px;
+    z-index: 2;
+    cursor: pointer;
 }
 /* Hero Block */
 .heroBlock{
@@ -278,4 +292,69 @@
     .startupIncubator .title{
         font-size: 48px;
     }
+}
+/* Projects */
+.projects{
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+    gap: 50px;
+}
+.projects .column{
+    flex: 1;
+    justify-content: center;
+}
+.projects .imageContainer{
+    width: 100%;
+    height: 600px;
+}
+/* Contact Us */
+.contactUs{
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+    gap: 20px;
+}
+.contactUs .column{
+    flex: 1;
+}
+.contactUs .column:first-child{
+    gap: 150px;
+}
+.contactUs .imageContainer{
+    width: 100%;
+    height: 600px;
+}
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.contactItem{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.contactItem .secondaryHeader{
+    text-transform: capitalize;
+    font-weight: 300;
+    font-size: 14px;
+}
+.contactItem .text{
+    color: white;
+}
+.contactUs .image{
+    background-color: #424a52;
+}
+.contactUs .column:nth-child(3){
+    gap: 15px;
+}
+.contactUs .column:nth-child(3) .title{
+    font-size: 24px;
+}
+.contactUs .column:nth-child(3) a{
+    font-size: 16px;
+    color: var(--secondary-header-color);
+    text-decoration: none;
+    cursor: pointer;
 }

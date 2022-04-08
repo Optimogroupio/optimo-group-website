@@ -4,6 +4,7 @@ import styles from '/styles/pages/Home.module.css'
 import { motion, useTransform, useViewportScroll } from 'framer-motion'
 import Image from 'next/image'
 import { useEffect } from 'react'
+import Footer from '../components/Footer'
 
 export default function Home() {
     const { scrollY } = useViewportScroll()
@@ -18,10 +19,22 @@ export default function Home() {
     const streamingSolutionsImage = useTransform(scrollY, [3800, 4400], ['0%', '60%'])
     const startupIncubatorImage = useTransform(scrollY, [3700, 4400], ['-100%', '0%'])
     const streamingSolutionsOpacity = useTransform(scrollY, [2700, 3400, 3600, 4400], [0, 1, 1, 0])
-    const startupIncubatorOpacity = useTransform(scrollY, [3500, 4400], [0, 1])
+    const startupIncubatorOpacity = useTransform(scrollY, [3500, 4400, 4600, 5000], [0, 1, 1, 0])
+    const projectsParallax = useTransform(scrollY, [5700, 5900], [0, 100])
 
-    function handleScroll(){
-        const element = document.getElementById('affiliate')
+    function printScroll(){
+        console.log(window.scrollY)
+    }
+        useEffect(() => {
+            window.addEventListener('scroll', printScroll)
+        return () => {
+            window.removeEventListener('scroll', printScroll)
+        }
+    }, [])
+    
+
+    function handleScroll(id){
+        const element = document.getElementById(id)
         element.scrollIntoView({behavior: 'smooth', block: 'center'})
     }
 
@@ -53,7 +66,7 @@ export default function Home() {
                     }}
                 >
                     <div 
-                        onClick={handleScroll}
+                        onClick={() => handleScroll('affiliate')}
                         className={styles.scrollDown}
                     >
                         <span>Scroll</span>
@@ -68,7 +81,7 @@ export default function Home() {
                         <span>Down</span>
                     </div>
                 </motion.div>
-            <div className={styles.container}>
+            <div id="top" className={styles.container}>
                 {/* Hero */}
                 <div id="hero" className={styles.heroBlock}>
                     <h1 className={styles.title}>
@@ -193,7 +206,7 @@ export default function Home() {
                 </motion.div>
                 {/* Startup Incubator */}
                 <motion.div 
-                    id="StartupIncubator" 
+                    id="startupIncubator" 
                     className={styles.startupIncubator}
                     style={{
                         opacity: startupIncubatorOpacity
@@ -222,6 +235,78 @@ export default function Home() {
                         </span>
                     </div>
                 </motion.div>
+                {/* Projects */}
+                <div id='projects' className={styles.projects}>
+                    <div className={styles.column}>
+                        <h2 className={styles.secondaryHeader}>To make peoples life better</h2>
+                        <h1 className={styles.title}>Projects</h1>
+                        <motion.span 
+                            className={styles.text}
+                            style={{
+                                translateY: projectsParallax
+                            }}
+                        >
+                            Lorem ipsum dolor sit amet consectetur, 
+                            adipisicing elit. Facilis quis necessitatibus 
+                            temporibus iure assumenda excepturi, unde commodi 
+                            repudiandae quaerat. Illo tempore quod deleniti odit 
+                            corporis et praesentium culpa ipsum aperiam vero fugiat, 
+                            quia molestias fugit. A commodi illum incidunt accusantium?
+                        </motion.span>
+                    </div>
+                    <div className={styles.column}>
+                        <div className={styles.imageContainer}>
+                            <div className={styles.image} />
+                        </div>
+                    </div>
+                </div>
+                {/* Contact Us */}
+                <div className={styles.contactUs}>
+                    <div className={styles.column}>
+                        <div className={styles.textContainer}>
+                            <h2 className={styles.secondaryHeader}>Have Any Questions? Don't be shy</h2>
+                            <h1 className={styles.title}>Contact Us</h1>
+                        </div>
+                        <div className={styles.contactInfo}>
+                            <div className={styles.contactItem}>
+                                <h2 className={styles.secondaryHeader}>Email</h2>
+                                <span className={styles.text}>info@optimogroup.io</span>
+                            </div>
+                            <div className={styles.contactItem}>
+                                <h2 className={styles.secondaryHeader}>Phone</h2>
+                                <span className={styles.text}>+995 958 23 08 23</span>
+                            </div>
+                            <div className={styles.contactItem}>
+                                <h2 className={styles.secondaryHeader}>Address</h2>
+                                <span className={styles.text}>Tbilisi, Akaki Tsereteli Ave 60</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={styles.column}>
+                        <div className={styles.imageContainer}>
+                            <div className={styles.image} />
+                        </div>
+                    </div>
+                    <div className={styles.column}>
+                        <h1 className={styles.title}>Menu</h1>
+                        <a onClick={() => handleScroll('affiliate')}>Affiliate Network</a>
+                        <a onClick={() => handleScroll('affiliateProject')}>Affiliate Project</a>
+                        <a onClick={() => handleScroll('streamingSolutions')}>Streaming Solutions</a>
+                        <a onClick={() => handleScroll('startupIncubator')}>Startup Incubator</a>
+                        <a onClick={() => handleScroll('projects')}>Projects</a>
+                    </div>
+                </div>
+                <div 
+                    className={styles.scrollToTop}
+                    onClick={() => window.scrollTo(0, 0)}
+                >
+                    <Image 
+                        src="/icons/arrow_downward.svg"
+                        width={20}
+                        height={20}
+                    />
+                </div>
+                <Footer />
             </div>
         </>
     )
