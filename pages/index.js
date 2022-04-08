@@ -137,7 +137,7 @@ export default function Home() {
                             Affiliate
                         </h1>
                         <h1 className={styles.title}>
-                            Network
+                            Project
                         </h1>
                         <span className={styles.text}>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -153,7 +153,7 @@ export default function Home() {
                 {/* Affiliate project */}
                 <div id="affiliateProject" className={styles.affiliateProject}>
                     <h2 className={styles.secondaryHeader}>Global 10 Projects</h2>
-                    <h1 className={styles.title}>Affiliate Project</h1>
+                    <h1 className={styles.title}>Affiliate Network</h1>
                     <span className={styles.text}>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                         Adipisci aut blanditiis ut in consequatur quaerat veritatis 
