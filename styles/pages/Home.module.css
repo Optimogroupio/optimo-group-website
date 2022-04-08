@@ -11,7 +11,8 @@
 }
 .backgroundImage{
     position: fixed;
-    top: calc(50% - 15vh);
+    top: 35%;
+    left: 10%;
     width: 80vw;
     height: 30vh;
     background-color: #333C45;

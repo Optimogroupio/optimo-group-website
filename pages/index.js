@@ -1,8 +1,15 @@
 import Head from 'next/head'
 import Header from '../components/Header'
 import styles from '/styles/pages/Home.module.css'
+import { motion, useTransform, useViewportScroll } from 'framer-motion'
 
 export default function Home() {
+    const { scrollY } = useViewportScroll()
+    const expandWidth = useTransform(scrollY, [0, 600], ['80vw', '100vw'])
+    const expandHeight = useTransform(scrollY, [0, 600], ['30vh', '100vh'])
+    const top = useTransform(scrollY, [0, 600], ['35%', '0%'])
+    const left = useTransform(scrollY, [0, 600], ['10%', '0%'])
+
     return (
         <>
             <Head>
@@ -16,8 +23,16 @@ export default function Home() {
                 
             </Head>
             <Header />
+                <motion.div 
+                    className={styles.backgroundImage} 
+                    style={{
+                        height: expandHeight,
+                        width: expandWidth,
+                        top: top,
+                        left: left
+                    }}
+                />
             <div className={styles.container}>
-                <div className={styles.backgroundImage} />
                 {/* Hero */}
                 <div className={styles.heroBlock}>
                     <h1 className={styles.title}>
