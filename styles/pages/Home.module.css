@@ -33,6 +33,10 @@
     font-weight: 300;
     color: var(--text-color);
 }
+.textContainer{
+    display: flex;
+    flex-direction: column;
+}
 .column{
     position: relative;
     display: flex;
@@ -59,6 +63,7 @@
     align-self: flex-end;
     width: 50%;
 }
+/* Affiliate */
 .affiliateBlock{
     display: flex;
     flex-direction: row;
@@ -84,6 +89,7 @@
     margin-top: 20px;
     padding-left: 20px;
 }
+/* Affiliate Project */
 .affiliateProject{
     display: flex;
     flex-direction: column;
@@ -105,6 +111,7 @@
     width: 65%;
     height: 500px;
 }
+/* Social Media */
 .socialMedia{
     position: relative;
     flex-direction: row;
@@ -128,4 +135,19 @@
     display: flex;
     width: 100%;
     height: 500px;
+}
+/* Streaming Solutions */
+.streamingSolutions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    z-index: 2;
+    gap: 50px;
+}
+.streamingSolutions .textContainer{
+    width: 50%;
+}
+.streamingSolutions .imageContainer{
+    width: 100%;
+    height: 400px;
 }

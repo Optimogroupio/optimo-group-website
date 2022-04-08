@@ -94,6 +94,24 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
+                {/* Streaming Solutions */}
+                <div className={styles.streamingSolutions}>
+                    <div className={styles.textContainer}>
+                        <h2 className={styles.secondaryHeader}>Streaming Projects and Platform</h2>
+                        <h1 className={styles.title}>Streaming Solutions</h1>
+                        <span className={styles.text}>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                            Fugit distinctio fugiat quibusdam aperiam dolorum ipsa porro odit, 
+                            corporis provident possimus.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                            Fugit distinctio fugiat quibusdam aperiam dolorum ipsa porro odit, 
+                            corporis provident possimus.
+                        </span>
+                    </div>
+                    <div className={styles.imageContainer}>
+                        <div className={styles.image} />
+                    </div>
+                </div>
                 <div/>
             </div>
         </>
