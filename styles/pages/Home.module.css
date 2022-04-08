@@ -5,4 +5,103 @@
     margin-right: auto;
     display: flex;
     flex-direction: column;
+    margin-top: 71px;
+    gap: 300px;
+}
+.backgroundImage{
+    position: fixed;
+    top: calc(50% - 15vh);
+    width: 80vw;
+    height: 30vh;
+    background-color: #333C45;
+    z-index: 1;
+}
+.highlight{
+    color: var(--highlight-color);
+}
+.title{
+    font-weight: 600;
+    font-size: 64px;
+}
+.secondaryHeader{
+    color: var(--secondary-header-color);
+    text-transform: uppercase;
+}
+.text{
+    display: flex;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--text-color);
+}
+.column{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.image{
+    width: 100%;
+    height: 100%;
+    background-color: var(--highlight-color);
+}
+.heroBlock{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20vh;
+    background-color: transparent;
+    z-index: 2;
+    padding: 0 50px 0 25px;
+}
+.heroBlock .title{
+    width: 80%;
+    text-transform: uppercase;
+}
+.heroBlock .text{
+    align-self: flex-end;
+    width: 50%;
+}
+.affiliateBlock{
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+}
+.affiliateBlock .column:first-child{
+    width: 60%;
+    height: 600px;
+}
+.affiliateBlock .column:nth-child(2){
+    width: 40%;
+    padding-top: 100px;
+}
+.affiliateBlock .title:first-child{
+    position: relative;
+    left: -100px;
+}
+.affiliateBlock .title:nth-child(2){
+    position: relative;
+    left: -50px;
+}
+.affiliateBlock .text{
+    margin-top: 20px;
+    padding-left: 20px;
+}
+.affiliateProject{
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    align-items: flex-end;
+}
+.affiliateProject .secondaryHeader, .affiliateProject .title{
+    width: fit-content;
+    text-align: right;
+}
+.affiliateProject .text{
+    text-align: right;
+    width: 60%;
+}
+.affiliateProject .imageContainer{
+    margin-top: 25px;
+    display: flex;
+    align-self: flex-start;
+    width: 65%;
+    height: 500px;
 }

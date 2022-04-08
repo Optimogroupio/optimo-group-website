@@ -2,10 +2,35 @@ html,
 body {
     padding: 0;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Titillium Web;
+    font-weight: 400;
     background-color: var(--background-color);
     color: white;
+}
+@font-face {
+    font-family: 'Titillium Web';
+    src: url(/fonts/TitilliumWeb-ExtraLight.ttf);
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'Titillium Web';
+    src: url(/fonts/TitilliumWeb-Light.ttf);
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Titillium Web';
+    src: url(/fonts/TitilliumWeb-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Titillium Web';
+    src: url(/fonts/TitilliumWeb-SemiBold.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Titillium Web';
+    src: url(/fonts/TitilliumWeb-Bold.ttf);
+    font-weight: 700;
 }
 :root{
     --background-color: #2B3239;
@@ -13,4 +38,7 @@ body {
     --secondary-header-color: #729CA2;
     --text-color: #B8C9CB;
     --highlight-color: #7F3FFC;
+}
+h1, h2, h3, h4, h5{
+    margin: 0;
 }
