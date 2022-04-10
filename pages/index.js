@@ -286,7 +286,7 @@ export default function Home() {
                 <div className={styles.contactUs}>
                     <div className={styles.column}>
                         <div className={styles.textContainer}>
-                            <h2 className={styles.secondaryHeader}>Have Any Questions? Don't be shy</h2>
+                            <h2 className={styles.secondaryHeader}>Have Any Questions? Don{`'`}t be shy</h2>
                             <h1 className={styles.title}>Contact Us</h1>
                         </div>
                         <div className={styles.contactInfo}>
