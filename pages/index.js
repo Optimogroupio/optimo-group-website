@@ -20,7 +20,6 @@ export default function Home() {
     const top = useTransform(scrollY, [0, 400], ['35%', '0%'])
     const left = useTransform(scrollY, [0, 400], ['10%', '0%'])
     const opacity = useTransform(scrollY, [0, 400], [1, 0])
-    const display = useTransform(scrollY, [0, 400], ['flex', 'none'])
     const affiliateNetworkParallax = useTransform(scrollY, [0, 400, 600, 1000], [0, -100, -150, -200])
     const affiliateProjectParallax = useTransform(scrollY, [1800, 2400], [0, -200])
     const socialMediaParallax = useTransform(scrollY, [2700, 2900], [0, -100])
@@ -29,7 +28,7 @@ export default function Home() {
     const streamingSolutionsOpacity = useTransform(scrollY, [2700, 3400, 3600, 4400], [0, 1, 1, 0])
     const startupIncubatorOpacity = useTransform(scrollY, [3500, 4400, 4600, 5000], [0, 1, 1, 0])
     const projectsParallax = useTransform(scrollY, [5700, 5900], [0, 100])
-    const [heroText, setHeroText] = useState('Digital World')
+    const [heroText, setHeroText] = useState(words[0])
     let index = 0;
     
     useEffect(() => {
@@ -74,7 +73,6 @@ export default function Home() {
                     className={styles.scrollDownContainer}
                     style={{
                         opacity: opacity,
-                        display: display
                     }}
                 >
                     <div 
@@ -338,6 +336,8 @@ export default function Home() {
                         <a onClick={() => handleScroll('projects')}>Projects</a>
                     </div>
                 </div>
+                <Footer />
+            </div>
                 <a 
                     className={styles.scrollToTop}
                     onClick={() => handleScroll('hero')}
@@ -349,8 +349,6 @@ export default function Home() {
                         height={20}
                     />
                 </a>
-                <Footer />
-            </div>
         </>
     )
 }

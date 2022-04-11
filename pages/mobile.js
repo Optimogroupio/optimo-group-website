@@ -3,6 +3,7 @@ import React from 'react'
 import Footer from '../components/Footer'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
+import { motion, useTransform, useViewportScroll } from 'framer-motion'
 import styles from '/styles/pages/Mobile.module.css'
 
 const words = [
@@ -13,7 +14,13 @@ const words = [
 ]
 
 export default function Mobile() {
-    const [heroText, setHeroText] = useState('Digital World')
+    const { scrollY } = useViewportScroll()
+    const expandWidth = useTransform(scrollY, [0, 400], ['90vw', '100vw'])
+    const expandHeight = useTransform(scrollY, [0, 400], ['40vh', '100vh'])
+    const top = useTransform(scrollY, [0, 400], ['28%', '0%'])
+    const left = useTransform(scrollY, [0, 400], ['5%', '0%'])
+    const opacity = useTransform(scrollY, [0, 400], [1, 0])
+    const [heroText, setHeroText] = useState(words[0])
 
     let index = 0;
     
@@ -46,9 +53,20 @@ export default function Mobile() {
                 <link rel='preload' href='/fonts/TitilliumWeb-SemiBold.ttf' as='font' type='font/ttf' crossOrigin='anonymous' />
                 <link rel='preload' href='/fonts/TitilliumWeb-ExtraLight.ttf' as='font' type='font/ttf' crossOrigin='anonymous' />
             </Head>
-            <div className={styles.backgroundImage} />
-            <div 
+            <motion.div 
+                className={styles.backgroundImage} 
+                style={{
+                    width: expandWidth,
+                    height: expandHeight,
+                    top: top,
+                    left: left
+                }}
+            />
+            <motion.div 
                 className={styles.scrollDownContainer}
+                style={{
+                    opacity: opacity,
+                }}
             >
                 <div 
                     onClick={() => handleScroll('affiliateProject')}
@@ -65,7 +83,7 @@ export default function Mobile() {
                     </div>
                     <span>Down</span>
                 </div>
-            </div>
+            </motion.div>
             <div className={styles.container}>
                 {/* Hero */}
                 <div id="hero" className={styles.heroBlock}>
@@ -232,6 +250,7 @@ export default function Mobile() {
                         <div className={styles.imageBg}/>
                     </div>
                 </div>
+            </div>
                 <a 
                     className={styles.scrollToTop}
                     onClick={() => handleScroll('hero')}
@@ -243,7 +262,6 @@ export default function Mobile() {
                         height={20}
                     />
                 </a>
-            </div>
             <Footer />
         </>
     )
