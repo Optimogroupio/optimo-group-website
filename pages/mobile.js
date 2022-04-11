@@ -190,6 +190,26 @@ export default function Mobile() {
                         take the form of access to experienced mentors with relevant area expertise.
                     </span>
                 </div>
+                {/* Projects */}
+                <div className={styles.projects}>
+                    <h2 className={styles.secondaryHeader}>To Make Peoples Life Better</h2>
+                    <h1 className={styles.title}>Projects</h1>
+                    <span className={styles.text}>
+                        We are building in-house international projects to make people{`'`}s life better,
+                        like Marketing automation software, and crypto payment gateways.
+                    </span>
+                    <div className={styles.imageContainer}>
+                        <div className={styles.imageBg}/>
+                        <div className={styles.image}>
+                            <Image
+                                src="/images/Projects.png"
+                                alt="Projects"
+                                width={300}
+                                height={300}
+                            />
+                        </div>
+                    </div>
+                </div>
                 <div />
             </div>
             <Footer />
