@@ -148,7 +148,27 @@ export default function Mobile() {
                         </div>
                     </div>
                 </div>
-                
+                {/* Streaming Solutions */}
+                <div className={styles.streamingSolutions}>
+                    <h2 className={styles.secondaryHeader}>Streaming Projects and Platform</h2>
+                    <h1 className={styles.title}>Streaming Solutions</h1>
+                    <span className={styles.text}>
+                        Variety of streaming solutions for companies interested in promoting their products and services. 
+                        with a large network of professional streamers, we can reach different audiences worldwide. 
+                        Optimo Group owns dedicated streamers platform, {`"`}Streamers Club{`"`} to enhance business solutions.
+                    </span>
+                    <div className={styles.imageContainer}>
+                        <div className={styles.imageBg}/>
+                        <div className={styles.image}>
+                            <Image
+                                src="/images/Streaming Solutions.png"
+                                alt="Streaming Solutions"
+                                width={250}
+                                height={250}
+                            />
+                        </div>
+                    </div>
+                </div>
                 <div />
             </div>
             <Footer />
