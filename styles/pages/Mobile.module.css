@@ -1,0 +1,24 @@
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 71px;
+    gap: 300px;
+    max-width: 1600px;
+    z-index: 2;
+    background-image: url(/images/lines.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-position-y: 30%;
+    background-position-x: 50%;
+}
+.backgroundImage{
+    position: fixed;
+    top: 35%;
+    left: 10%;
+    width: 80vw;
+    height: 30vh;
+    background-color: #333C45;
+    z-index: 1;
+}

@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Header from '../components/Header'
 import styles from '/styles/pages/Home.module.css'
 import { motion, useTransform, useViewportScroll } from 'framer-motion'
 import Image from 'next/image'
@@ -63,17 +62,16 @@ export default function Home() {
                 <link rel='preload' href='/fonts/TitilliumWeb-SemiBold.ttf' as='font' type='font/ttf' crossOrigin='anonymous' />
                 <link rel='preload' href='/fonts/TitilliumWeb-ExtraLight.ttf' as='font' type='font/ttf' crossOrigin='anonymous' />
             </Head>
-            <Header />
-                <motion.div 
-                    className={styles.backgroundImage} 
+            <motion.div 
+                className={styles.backgroundImage} 
                     style={{
                         height: expandHeight,
                         width: expandWidth,
                         top: top,
                         left: left
-                    }}
-                />
-                <motion.div 
+                }}
+            />
+            <motion.div 
                     className={styles.scrollDownContainer}
                     style={{
                         opacity: opacity,
@@ -95,7 +93,7 @@ export default function Home() {
                         </div>
                         <span>Down</span>
                     </div>
-                </motion.div>
+            </motion.div>
             <div id="top" className={styles.container}>
                 {/* Hero */}
                 <div id="hero" className={styles.heroBlock}>
@@ -123,7 +121,15 @@ export default function Home() {
                             translateY: affiliateNetworkParallax
                         }}
                     >
-                        <div className={styles.image} />
+                        <div className={styles.imageBg} />
+                        <div className={styles.image}>
+                            <Image
+                                src="/images/Affiliate Network.png"
+                                alt="Affiliate Network"
+                                width={800}
+                                height={800}
+                            />
+                        </div>
                     </motion.div>
                     <div className={styles.column}>
                         <h1 className={styles.title}>
@@ -155,7 +161,15 @@ export default function Home() {
                             translateY: affiliateProjectParallax
                         }}
                     >
-                        <div className={styles.image} />
+                        <div className={styles.imageBg} />
+                        <div className={styles.image}>
+                            <Image 
+                                src="/images/Affiliate Project.png"
+                                alt="Affiliate Project"
+                                width={800}
+                                height={800}
+                            />
+                        </div>
                     </motion.div>
                 </div>
                 {/* Social Media */}
@@ -176,7 +190,15 @@ export default function Home() {
                     </motion.div>
                     <div className={styles.column}>
                         <div className={styles.imageContainer}>
-                            <div className={styles.image} />
+                            <div className={styles.imageBg} />
+                            <div className={styles.image} style={{right: 100, bottom: 0}}>
+                                <Image 
+                                    src="/images/Betting Social Media.png"
+                                    alt="Betting Social Media"
+                                    width={500}
+                                    height={500}
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -204,8 +226,16 @@ export default function Home() {
                             style={{
                                 translateX: streamingSolutionsImage
                             }}
-                            className={styles.image} 
+                            className={styles.imageBg} 
                         />
+                        <div className={styles.image}>
+                            <Image
+                                src="/images/Streaming Solutions.png"
+                                alt="Streaming Solutions"
+                                width={500}
+                                height={500}
+                            />
+                        </div>
                     </div>
                 </motion.div>
                 {/* Startup Incubator */}
@@ -221,11 +251,19 @@ export default function Home() {
                         <h1 className={styles.title}>Startup Incubator</h1>
                         <div className={styles.imageContainer}>
                             <motion.div 
-                                className={styles.image} 
+                                className={styles.imageBg} 
                                 style={{
                                     translateX: startupIncubatorImage
                                 }}
                             />
+                            <div className={styles.image}>
+                                <Image
+                                    src="/images/Startup Incubator.png"
+                                    alt="Startup Incubator"
+                                    width={500}
+                                    height={500}
+                                />
+                            </div>
                         </div>
                     </div>
                     <div className={styles.column}>
@@ -253,7 +291,15 @@ export default function Home() {
                     </div>
                     <div className={styles.column}>
                         <div className={styles.imageContainer}>
-                            <div className={styles.image} />
+                            <div className={styles.imageBg} />
+                            <div className={styles.image} style={{bottom: '-100px'}}>
+                                <Image
+                                    src="/images/Projects.png"
+                                    alt="Projects"
+                                    width={800}
+                                    height={800}
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -281,7 +327,7 @@ export default function Home() {
                     </div>
                     <div className={styles.column}>
                         <div className={styles.imageContainer}>
-                            <div className={styles.image} />
+                            <div className={styles.imageBg} />
                         </div>
                     </div>
                     <div className={styles.column}>

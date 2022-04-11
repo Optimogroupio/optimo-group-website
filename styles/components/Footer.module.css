@@ -1,9 +1,11 @@
 .container{
+    position: relative;
     display: flex;
-    z-index: 2;
+    z-index: 999;
     padding-bottom: 25px;
     padding-top: 25px;
 }
 .text{
-    color: var(--secondary-header-color)
+    color: var(--secondary-header-color);
+    font-size: 12px;
 }

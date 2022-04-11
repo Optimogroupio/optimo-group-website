@@ -52,12 +52,16 @@
     flex-direction: column;
 }
 .imageContainer{
-    overflow: hidden;
+    position: relative;
 }
-.image{
+.imageBg{
     width: 100%;
     height: 100%;
     background-color: var(--highlight-color);
+}
+.image{
+    position: absolute;
+    bottom: 20px;
 }
 .scrollDownContainer{
     position: fixed;
@@ -239,7 +243,8 @@
     display: flex;
     flex-direction: column;
     /* z-index: 2; */
-    gap: 50px;
+    gap: 150px;
+    overflow: hidden;
 }
 .streamingSolutions .textContainer{
     width: 50%;
@@ -268,9 +273,13 @@
     display: flex;
     flex-direction: row;
     /* z-index: 2; */
+    overflow: hidden;
 }
 .startupIncubator .column:first-child{
     width: 60%;
+}
+.startupIncubator .column:first-child .imageContainer{
+    margin-top: 120px;
 }
 .startupIncubator .column:nth-child(2){
     position: relative;
@@ -313,7 +322,7 @@
 }
 .projects .imageContainer{
     width: 100%;
-    height: 600px;
+    height: 400px;
 }
 /* Contact Us */
 .contactUs{
@@ -350,7 +359,7 @@
 .contactItem .text{
     color: white;
 }
-.contactUs .image{
+.contactUs .imageBg{
     background-color: #424a52;
 }
 .contactUs .column:nth-child(3){
