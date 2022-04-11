@@ -38,10 +38,10 @@ export default function Mobile() {
         }
     }, [index])
 
-    // function handleScroll(id){
-    //     const element = document.getElementById(id)
-    //     element.scrollIntoView({behavior: 'smooth', block: 'center'})
-    // }
+    function handleScroll(id){
+        const element = document.getElementById(id)
+        element.scrollIntoView({behavior: 'smooth', block: 'center'})
+    }
 
     // function printScroll(){
     //     console.log(window.scrollY)
