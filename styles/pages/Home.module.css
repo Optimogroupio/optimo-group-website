@@ -1,13 +1,20 @@
 .container {
     position: relative;
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    padding-left: 10%;
+    padding-right: 10%;
     display: flex;
     flex-direction: column;
     margin-top: 71px;
     gap: 300px;
     max-width: 1600px;
+    z-index: 2;
+    background-image: url(/images/lines.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-position-y: 30%;
+    background-position-x: 50%;
 }
 .backgroundImage{
     position: fixed;
@@ -106,7 +113,7 @@
     flex-direction: column;
     margin-top: 20vh;
     background-color: transparent;
-    z-index: 2;
+    /* z-index: 2; */
     padding: 0 50px 0 25px;
 }
 .heroBlock .title{
@@ -150,7 +157,7 @@
 .affiliateBlock{
     display: flex;
     flex-direction: row;
-    z-index: 2;
+    /* z-index: 2; */
 }
 .affiliateBlock .column:first-child{
     width: 60%;
@@ -176,7 +183,7 @@
 .affiliateProject{
     display: flex;
     flex-direction: column;
-    z-index: 2;
+    /* z-index: 2; */
     align-items: flex-end;
 }
 .affiliateProject .secondaryHeader, .affiliateProject .title{
@@ -199,7 +206,7 @@
     position: relative;
     flex-direction: row;
     width: 100%;
-    z-index: 2;
+    /* z-index: 2; */
     min-height: 600px;
 }
 .socialMedia .column:first-child{
@@ -231,7 +238,7 @@
 .streamingSolutions{
     display: flex;
     flex-direction: column;
-    z-index: 2;
+    /* z-index: 2; */
     gap: 50px;
 }
 .streamingSolutions .textContainer{
@@ -260,7 +267,7 @@
 .startupIncubator{
     display: flex;
     flex-direction: row;
-    z-index: 2;
+    /* z-index: 2; */
 }
 .startupIncubator .column:first-child{
     width: 60%;
@@ -297,7 +304,7 @@
 .projects{
     display: flex;
     flex-direction: row;
-    z-index: 2;
+    /* z-index: 2; */
     gap: 50px;
 }
 .projects .column{
@@ -312,7 +319,7 @@
 .contactUs{
     display: flex;
     flex-direction: row;
-    z-index: 2;
+    /* z-index: 2; */
     gap: 20px;
 }
 .contactUs .column{
