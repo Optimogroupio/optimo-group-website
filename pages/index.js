@@ -45,7 +45,6 @@ export default function Home() {
 
     function handleScroll(id){
         const element = document.getElementById(id)
-        console.log(id)
         element.scrollIntoView({behavior: 'smooth', block: 'center'})
     }
 

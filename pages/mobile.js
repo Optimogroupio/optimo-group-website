@@ -20,6 +20,8 @@ export default function Mobile() {
     const top = useTransform(scrollY, [0, 400], ['28%', '0%'])
     const left = useTransform(scrollY, [0, 400], ['5%', '0%'])
     const opacity = useTransform(scrollY, [0, 400], [1, 0])
+    const affiliateProjectOpacity = useTransform(scrollY, [0, 400, 600, 1100], [0, 1, 1, 0])
+    const affiliateProjectTranslate = useTransform(scrollY, [300, 500], ['-100%', '0%'])
     const [heroText, setHeroText] = useState(words[0])
 
     let index = 0;
@@ -38,9 +40,19 @@ export default function Mobile() {
 
     function handleScroll(id){
         const element = document.getElementById(id)
-        console.log(id)
         element.scrollIntoView({behavior: 'smooth', block: 'center'})
     }
+
+    function printScroll(){
+        console.log(window.scrollY)
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', printScroll)
+        return () => {
+            window.removeEventListener('scroll', printScroll)
+        }
+    }, [])
 
     return (
         <>
@@ -104,7 +116,13 @@ export default function Mobile() {
                     </span>
                 </div>
                 {/* Affiliate Project */}
-                <div id="affiliateProject" className={styles.affiliateProject}>
+                <motion.div 
+                    id="affiliateProject" 
+                    className={styles.affiliateProject}
+                    style={{
+                        opacity: affiliateProjectOpacity
+                    }}
+                >
                     <div className={styles.imageContainer}>
                         <div className={styles.imageBg}/>
                         <div className={styles.image}>
@@ -117,12 +135,18 @@ export default function Mobile() {
                         </div>
                     </div>
                     <h1 className={styles.title}> Affiliate Project </h1>
-                    <span className={styles.text}>
+                    <motion.span 
+                        className={styles.text}
+                        style={{
+                            translateX: affiliateProjectTranslate,
+                            translateY: affiliateProjectTranslate
+                        }}
+                    >
                         10 successful projects in the affiliate marketing igaming field. 
                         Now we are in 21 countries and still growing {'<3 '} 
                         We go worldwide to deliver unbelievable results for our users and partners.
-                    </span>
-                </div>
+                    </motion.span>
+                </motion.div>
                 {/* Affiliate Network */}
                 <div id="affiliateNetwork" className={styles.affiliateNetwork}>
                     <h2 className={styles.secondaryHeader}>Global 10 Projects</h2>
