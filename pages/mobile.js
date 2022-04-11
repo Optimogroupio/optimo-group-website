@@ -169,6 +169,27 @@ export default function Mobile() {
                         </div>
                     </div>
                 </div>
+                {/* Startup Incubator */}
+                <div className={styles.startupIncubator}>
+                    <h2 className={styles.secondaryHeader}>Create In-House</h2>
+                    <h1 className={styles.title}>Startup Incubator</h1>
+                    <div className={styles.imageContainer}>
+                        <div className={styles.imageBg}/>
+                        <div className={styles.image}>
+                            <Image
+                                src="/images/Startup Incubator.png"
+                                alt="Startup Incubator"
+                                width={300}
+                                height={300}
+                            />
+                        </div>
+                    </div>
+                    <span className={styles.text}>
+                        We assist new startups to succeed: solving some of the problems associated with mentoring, 
+                        training, and running startups by providing workspace and funding. Our Support means to 
+                        take the form of access to experienced mentors with relevant area expertise.
+                    </span>
+                </div>
                 <div />
             </div>
             <Footer />
