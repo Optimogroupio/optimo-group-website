@@ -22,6 +22,16 @@ export default function Mobile() {
     const opacity = useTransform(scrollY, [0, 400], [1, 0])
     const affiliateProjectOpacity = useTransform(scrollY, [0, 400, 600, 1100], [0, 1, 1, 0])
     const affiliateProjectTranslate = useTransform(scrollY, [300, 500], ['-100%', '0%'])
+    const affiliateNetworkOpacity = useTransform(scrollY, [800, 1100, 1600, 1900], [0, 1, 1, 0])
+    const affiliateNetworkTranslate = useTransform(scrollY, [800, 1000], ['100%', '0%'])
+    const socialMediaOpacity = useTransform(scrollY, [1200, 1600, 2000, 2400], [0, 1, 1, 0])
+    const socialMediaTranslate = useTransform(scrollY, [1200, 1600], ['-100%', '0%'])
+    const streamingSolutionsOpacity = useTransform(scrollY, [1900, 2300, 2700, 3100], [0, 1, 1, 0])
+    const streamingSolutionsTranslate = useTransform(scrollY, [1900, 2300], ['100%', '0%'])
+    const startupIncubatorOpacity = useTransform(scrollY, [2700, 3100, 3500, 3900], [0, 1, 1, 0])
+    const startupIncubatorTranslate = useTransform(scrollY, [2700, 3100], ['-100%', '0%'])
+    const projectsOpacity = useTransform(scrollY, [3300, 3700, 4100, 4500], [0, 1, 1, 0])
+    const projectsTranslate = useTransform(scrollY, [3200, 3700], ['100%', '0%'])
     const [heroText, setHeroText] = useState(words[0])
 
     let index = 1;
@@ -148,15 +158,27 @@ export default function Mobile() {
                     </motion.span>
                 </motion.div>
                 {/* Affiliate Network */}
-                <div id="affiliateNetwork" className={styles.affiliateNetwork}>
+                <motion.div 
+                    id="affiliateNetwork" 
+                    className={styles.affiliateNetwork}
+                    style={{
+                        opacity: affiliateNetworkOpacity
+                    }}
+                >
                     <h2 className={styles.secondaryHeader}>Global 10 Projects</h2>
                     <h1 className={styles.title}>Affiliate Network</h1>
-                    <span className={styles.text}>
+                    <motion.span 
+                        className={styles.text}
+                        style={{
+                            translateX: affiliateNetworkTranslate,
+                            translateY: affiliateNetworkTranslate
+                        }}
+                    >
                         Multi-brand affiliate management software for your website.
                         Tailored digital solution to recruit affiliates and grow your affiliate network. 
                         Increase Revenues. Dedicated Support. Multiple Marketing Tools. 
                         Real-time Insights. Real-time Data.
-                    </span>
+                    </motion.span>
                     <div className={styles.imageContainer}>
                         <div className={styles.imageBg}/>
                         <div className={styles.image}>
@@ -168,16 +190,28 @@ export default function Mobile() {
                             />
                         </div>
                     </div>
-                </div>
+                </motion.div>
                 {/* Social Media */}
-                <div id="socialMedia" className={styles.socialMedia}>
+                <motion.div 
+                    id="socialMedia" 
+                    className={styles.socialMedia}
+                    style={{
+                        opacity: socialMediaOpacity
+                    }}
+                >
                     <h1 className={styles.title}>Betting Social Media</h1>
-                    <span className={styles.text}>
+                    <motion.span 
+                        className={styles.text}
+                        style={{
+                            translateX: socialMediaTranslate,
+                            translateY: socialMediaTranslate
+                        }}
+                    >
                         Betting Social Media unifies a gambling-loving community. 
                         Tipsters from all over the world share their predictions for various sporting events. 
                         Customers have the opportunity to get in touch with each other, follow, discuss, engage, and more.
                         Best tipsters have a chance to win various prizes and rewards.
-                    </span>
+                    </motion.span>
                     <div className={styles.imageContainer}>
                         <div className={styles.imageBg}/>
                         <div className={styles.image}>
@@ -189,16 +223,28 @@ export default function Mobile() {
                             />
                         </div>
                     </div>
-                </div>
+                </motion.div>
                 {/* Streaming Solutions */}
-                <div id="streamingSolutions" className={styles.streamingSolutions}>
+                <motion.div 
+                    id="streamingSolutions" 
+                    className={styles.streamingSolutions}
+                    style={{
+                        opacity: streamingSolutionsOpacity
+                    }}
+                >
                     <h2 className={styles.secondaryHeader}>Streaming Projects and Platform</h2>
                     <h1 className={styles.title}>Streaming Solutions</h1>
-                    <span className={styles.text}>
+                    <motion.span 
+                        className={styles.text}
+                        style={{
+                            translateX: streamingSolutionsTranslate,
+                            translateY: streamingSolutionsTranslate
+                        }}
+                    >
                         Variety of streaming solutions for companies interested in promoting their products and services. 
                         with a large network of professional streamers, we can reach different audiences worldwide. 
                         Optimo Group owns dedicated streamers platform, {`"`}Streamers Club{`"`} to enhance business solutions.
-                    </span>
+                    </motion.span>
                     <div className={styles.imageContainer}>
                         <div className={styles.imageBg}/>
                         <div className={styles.image}>
@@ -210,9 +256,15 @@ export default function Mobile() {
                             />
                         </div>
                     </div>
-                </div>
+                </motion.div>
                 {/* Startup Incubator */}
-                <div id="startupIncubator" className={styles.startupIncubator}>
+                <motion.div 
+                    id="startupIncubator" 
+                    className={styles.startupIncubator}
+                    style={{
+                        opacity: startupIncubatorOpacity
+                    }}
+                >
                     <h2 className={styles.secondaryHeader}>Create In-House</h2>
                     <h1 className={styles.title}>Startup Incubator</h1>
                     <div className={styles.imageContainer}>
@@ -226,20 +278,38 @@ export default function Mobile() {
                             />
                         </div>
                     </div>
-                    <span className={styles.text}>
+                    <motion.span 
+                        className={styles.text}
+                        style={{
+                            translateX: startupIncubatorTranslate,
+                            translateY: startupIncubatorTranslate
+                        }}
+                    >
                         We assist new startups to succeed: solving some of the problems associated with mentoring, 
                         training, and running startups by providing workspace and funding. Our Support means to 
                         take the form of access to experienced mentors with relevant area expertise.
-                    </span>
-                </div>
+                    </motion.span>
+                </motion.div>
                 {/* Projects */}
-                <div id="projects" className={styles.projects}>
+                <motion.div 
+                    id="projects" 
+                    className={styles.projects}
+                    style={{
+                        opacity: projectsOpacity
+                    }}
+                >
                     <h2 className={styles.secondaryHeader}>To Make Peoples Life Better</h2>
                     <h1 className={styles.title}>Projects</h1>
-                    <span className={styles.text}>
+                    <motion.span
+                        className={styles.text}
+                        style={{
+                            translateX: projectsTranslate,
+                            translateY: projectsTranslate
+                        }}
+                    >
                         We are building in-house international projects to make people{`'`}s life better,
                         like Marketing automation software, and crypto payment gateways.
-                    </span>
+                    </motion.span>
                     <div className={styles.imageContainer}>
                         <div className={styles.imageBg}/>
                         <div className={styles.image}>
@@ -251,7 +321,7 @@ export default function Mobile() {
                             />
                         </div>
                     </div>
-                </div>
+                </motion.div>
                 {/* Contact Us */}
                 <div className={styles.contactUs}>
                     <h2 className={styles.secondaryHeader}>Have any questions? Don{`'`}t be shy</h2>

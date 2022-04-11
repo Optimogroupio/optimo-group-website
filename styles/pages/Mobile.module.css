@@ -13,6 +13,7 @@
     background-size: 150%;
     background-position-y: 25%;
     background-position-x: 50%;
+    overflow: hidden;
 }
 .backgroundImage{
     position: fixed;
