@@ -5,6 +5,7 @@ import { motion, useTransform, useViewportScroll } from 'framer-motion'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import Footer from '../components/Footer'
+import { useRouter } from 'next/router'
 
 const words = [
     'Digital world',
@@ -30,6 +31,7 @@ export default function Home() {
     const startupIncubatorOpacity = useTransform(scrollY, [3500, 4400, 4600, 5000], [0, 1, 1, 0])
     const projectsParallax = useTransform(scrollY, [5700, 5900], [0, 100])
     const [heroText, setHeroText] = useState('Digital World')
+    const router = useRouter()
     let index = 0;
     
     useEffect(() => {
