@@ -104,7 +104,7 @@
     border-radius: 100%;
     left: calc(50% - 20px);
     bottom: 25px;
-    z-index: 2;
+    z-index: 999;
     cursor: pointer;
 }
 /* Hero Block */
@@ -153,48 +153,48 @@
         gap: 50px;
     }
 }
-/* Affiliate */
-.affiliateBlock{
+/* Affiliate Project*/
+.affiliateProject{
     display: flex;
     flex-direction: row;
     /* z-index: 2; */
 }
-.affiliateBlock .column:first-child{
+.affiliateProject .column:first-child{
     width: 60%;
     height: 600px;
 }
-.affiliateBlock .column:nth-child(2){
+.affiliateProject .column:nth-child(2){
     width: 40%;
     padding-top: 100px;
 }
-.affiliateBlock .title:first-child{
+.affiliateProject .title:first-child{
     position: relative;
     left: -100px;
 }
-.affiliateBlock .title:nth-child(2){
+.affiliateProject .title:nth-child(2){
     position: relative;
     left: -50px;
 }
-.affiliateBlock .text{
+.affiliateProject .text{
     margin-top: 20px;
     padding-left: 20px;
 }
-/* Affiliate Project */
-.affiliateProject{
+/* Affiliate */
+.affiliateBlock{
     display: flex;
     flex-direction: column;
     /* z-index: 2; */
     align-items: flex-end;
 }
-.affiliateProject .secondaryHeader, .affiliateProject .title{
+.affiliateBlock .secondaryHeader, .affiliateProject .title{
     width: fit-content;
     text-align: right;
 }
-.affiliateProject .text{
+.affiliateBlock .text{
     text-align: right;
     width: 60%;
 }
-.affiliateProject .imageContainer{
+.affiliateBlock .imageContainer{
     margin-top: 25px;
     display: flex;
     align-self: flex-start;

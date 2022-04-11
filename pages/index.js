@@ -7,11 +7,10 @@ import { useEffect, useState } from 'react'
 import Footer from '../components/Footer'
 
 const words = [
-    'Hello',
-    'Bonjour',
-    'Hola',
-    'Ciao',
-    'Hallo',
+    'Digital world',
+    'Business',
+    'Users',
+    'Everybody'
 ]
 
 export default function Home() {
@@ -21,6 +20,7 @@ export default function Home() {
     const top = useTransform(scrollY, [0, 400], ['35%', '0%'])
     const left = useTransform(scrollY, [0, 400], ['10%', '0%'])
     const opacity = useTransform(scrollY, [0, 400], [1, 0])
+    const display = useTransform(scrollY, [0, 400], ['flex', 'none'])
     const affiliateNetworkParallax = useTransform(scrollY, [0, 400, 600, 1000], [0, -100, -150, -200])
     const affiliateProjectParallax = useTransform(scrollY, [1800, 2400], [0, -200])
     const socialMediaParallax = useTransform(scrollY, [2700, 2900], [0, -100])
@@ -31,17 +31,6 @@ export default function Home() {
     const projectsParallax = useTransform(scrollY, [5700, 5900], [0, 100])
     const [heroText, setHeroText] = useState('Hello')
     let index = 0;
-
-    // function printScroll(){
-    //     console.log(window.scrollY)
-    // }
-    // useEffect(() => {
-    //     window.addEventListener('scroll', printScroll)
-        
-    //     return () => {
-    //         window.removeEventListener('scroll', printScroll)
-    //     }
-    // }, [])
     
     useEffect(() => {
         const interval = setInterval(() => {
@@ -57,6 +46,7 @@ export default function Home() {
 
     function handleScroll(id){
         const element = document.getElementById(id)
+        console.log(id)
         element.scrollIntoView({behavior: 'smooth', block: 'center'})
     }
 
@@ -84,11 +74,12 @@ export default function Home() {
                 <motion.div 
                     className={styles.scrollDownContainer}
                     style={{
-                        opacity: opacity
+                        opacity: opacity,
+                        display: display
                     }}
                 >
                     <div 
-                        onClick={() => handleScroll('affiliate')}
+                        onClick={() => handleScroll('affiliateProject')}
                         className={styles.scrollDown}
                     >
                         <span>Scroll</span>
@@ -122,8 +113,8 @@ export default function Home() {
                         iure debitis, dolorum nobis doloribus quod officia odit.
                     </span>
                 </div>
-                {/* Affiliate */}
-                <div id="affiliate" className={styles.affiliateBlock}>
+                {/* Affiliate project */}
+                <div id="affiliateProject" className={styles.affiliateProject}>
                     <motion.div 
                         className={styles.column}
                         style={{
@@ -140,29 +131,21 @@ export default function Home() {
                             Project
                         </h1>
                         <span className={styles.text}>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Unde maxime autem expedita similique, earum officia, 
-                            soluta ullam illo pariatur corrupti doloremque qui nobis 
-                            temporibus molestiae voluptatibus assumenda exercitationem 
-                            nesciunt? Tempora repellendus est provident eos molestias at 
-                            perspiciatis, ipsum voluptas obcaecati harum expedita beatae 
-                            aspernatur sit voluptatibus a, maxime deserunt ab!
+                            10 successful projects in the affiliate marketing igaming field. 
+                            Now we are in 21 countries and still growing {'<3'} 
+                            We go worldwide to deliver unbelievable results for our users and partners.
                         </span>
                     </div>
                 </div>
-                {/* Affiliate project */}
-                <div id="affiliateProject" className={styles.affiliateProject}>
+                {/* Affiliate  */}
+                <div id="affiliate" className={styles.affiliateBlock}>
                     <h2 className={styles.secondaryHeader}>Global 10 Projects</h2>
                     <h1 className={styles.title}>Affiliate Network</h1>
                     <span className={styles.text}>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Adipisci aut blanditiis ut in consequatur quaerat veritatis 
-                        nesciunt id facilis quos!
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                        Magni aliquam beatae totam sit harum odit architecto voluptas. 
-                        Quaerat optio totam accusantium maxime! Quaerat iure quas deleniti culpa 
-                        aliquam tempore autem nobis hic eius. Magnam, minima? Sint placeat 
-                        laudantium exercitationem reiciendis.
+                        Multi-brand affiliate management software for your website.
+                        Tailored digital solution to recruit affiliates and grow your affiliate network. 
+                        Increase Revenues. Dedicated Support. Multiple Marketing Tools. 
+                        Real-time Insights. Real-time Data.
                     </span>
                     <motion.div 
                         className={styles.imageContainer}
@@ -183,10 +166,10 @@ export default function Home() {
                     >
                         <h1 className={styles.title}>Betting Social Media</h1>
                         <span className={styles.text}>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                            Amet quibusdam ea quae provident et placeat minus voluptatibus 
-                            ex vero dolorum praesentium molestias iste, natus tempore 
-                            assumenda officia ab dolorem commodi.
+                            Betting Social Media unifies a gambling-loving community. 
+                            Tipsters from all over the world share their predictions for various sporting events. 
+                            Customers have the opportunity to get in touch with each other, follow, discuss, engage, and more.
+                            Best tipsters have a chance to win various prizes and rewards.
                         </span>
                     </motion.div>
                     <div className={styles.column}>
@@ -207,12 +190,9 @@ export default function Home() {
                         <h2 className={styles.secondaryHeader}>Streaming Projects and Platform</h2>
                         <h1 className={styles.title}>Streaming Solutions</h1>
                         <span className={styles.text}>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                            Fugit distinctio fugiat quibusdam aperiam dolorum ipsa porro odit, 
-                            corporis provident possimus.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                            Fugit distinctio fugiat quibusdam aperiam dolorum ipsa porro odit, 
-                            corporis provident possimus.
+                            Variety of streaming solutions for companies interested in promoting their products and services. 
+                            with a large network of professional streamers, we can reach different audiences worldwide. 
+                            Optimo Group owns dedicated streamers platform, "Streamers Club" to enhance business solutions.
                         </span>
                     </div>
                     <div 
@@ -248,12 +228,9 @@ export default function Home() {
                     </div>
                     <div className={styles.column}>
                         <span className={styles.text}>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                            Earum blanditiis ipsa repudiandae facere iure similique quo 
-                            quae reprehenderit voluptatem eaque in, culpa voluptatum ut 
-                            dignissimos sequi recusandae cupiditate praesentium animi, 
-                            repellat dolores magni aperiam. At repudiandae excepturi libero 
-                            voluptatibus amet.
+                            We assist new startups to succeed: solving some of the problems associated with mentoring, 
+                            training, and running startups by providing workspace and funding. Our Support means to 
+                            take the form of access to experienced mentors with relevant area expertise.
                         </span>
                     </div>
                 </motion.div>
@@ -268,12 +245,8 @@ export default function Home() {
                                 translateY: projectsParallax
                             }}
                         >
-                            Lorem ipsum dolor sit amet consectetur, 
-                            adipisicing elit. Facilis quis necessitatibus 
-                            temporibus iure assumenda excepturi, unde commodi 
-                            repudiandae quaerat. Illo tempore quod deleniti odit 
-                            corporis et praesentium culpa ipsum aperiam vero fugiat, 
-                            quia molestias fugit. A commodi illum incidunt accusantium?
+                            We are building in-house international projects to make people's life better,
+                            like Marketing automation software, and crypto payment gateways.
                         </motion.span>
                     </div>
                     <div className={styles.column}>
@@ -300,7 +273,7 @@ export default function Home() {
                             </div>
                             <div className={styles.contactItem}>
                                 <h2 className={styles.secondaryHeader}>Address</h2>
-                                <span className={styles.text}>Tbilisi, Akaki Tsereteli Ave 60</span>
+                                <span className={styles.text}>Cyprus, Limassol, 36 Agias Fylaxeos, 3rd Floor</span>
                             </div>
                         </div>
                     </div>
@@ -318,7 +291,7 @@ export default function Home() {
                         <a onClick={() => handleScroll('projects')}>Projects</a>
                     </div>
                 </div>
-                <div 
+                <a 
                     className={styles.scrollToTop}
                     onClick={() => handleScroll('hero')}
                 >
@@ -327,7 +300,7 @@ export default function Home() {
                         width={20}
                         height={20}
                     />
-                </div>
+                </a>
                 <Footer />
             </div>
         </>
