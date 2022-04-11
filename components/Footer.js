@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className={styles.container}>
         <span className={styles.text}>
-            Optimo Group © 2022 QUALERIO HOLDINGS LTD. All rights reserved
+            Optimo Group © 2022 All rights reserved
         </span>
     </footer>
   )

@@ -106,7 +106,7 @@ export default function Mobile() {
                     </span>
                 </div>
                 {/* Affiliate Network */}
-                <div className={styles.affiliateNetwork}>
+                <div id="affiliateNetwork" className={styles.affiliateNetwork}>
                     <h2 className={styles.secondaryHeader}>Global 10 Projects</h2>
                     <h1 className={styles.title}>Affiliate Network</h1>
                     <span className={styles.text}>
@@ -128,7 +128,7 @@ export default function Mobile() {
                     </div>
                 </div>
                 {/* Social Media */}
-                <div className={styles.socialMedia}>
+                <div id="socialMedia" className={styles.socialMedia}>
                     <h1 className={styles.title}>Betting Social Media</h1>
                     <span className={styles.text}>
                         Betting Social Media unifies a gambling-loving community. 
@@ -149,7 +149,7 @@ export default function Mobile() {
                     </div>
                 </div>
                 {/* Streaming Solutions */}
-                <div className={styles.streamingSolutions}>
+                <div id="streamingSolutions" className={styles.streamingSolutions}>
                     <h2 className={styles.secondaryHeader}>Streaming Projects and Platform</h2>
                     <h1 className={styles.title}>Streaming Solutions</h1>
                     <span className={styles.text}>
@@ -170,7 +170,7 @@ export default function Mobile() {
                     </div>
                 </div>
                 {/* Startup Incubator */}
-                <div className={styles.startupIncubator}>
+                <div id="startupIncubator" className={styles.startupIncubator}>
                     <h2 className={styles.secondaryHeader}>Create In-House</h2>
                     <h1 className={styles.title}>Startup Incubator</h1>
                     <div className={styles.imageContainer}>
@@ -191,7 +191,7 @@ export default function Mobile() {
                     </span>
                 </div>
                 {/* Projects */}
-                <div className={styles.projects}>
+                <div id="projects" className={styles.projects}>
                     <h2 className={styles.secondaryHeader}>To Make Peoples Life Better</h2>
                     <h1 className={styles.title}>Projects</h1>
                     <span className={styles.text}>
@@ -210,7 +210,39 @@ export default function Mobile() {
                         </div>
                     </div>
                 </div>
-                <div />
+                {/* Contact Us */}
+                <div className={styles.contactUs}>
+                    <h2 className={styles.secondaryHeader}>Have any questions? Don{`'`}t be shy</h2>
+                    <h1 className={styles.title}>Contact Us</h1>
+                    <div className={styles.contactInfo}>
+                        <div className={styles.contactItem}>
+                            <h2 className={styles.secondaryHeader}>Email</h2>
+                            <span className={styles.text}>info@optimogroup.io</span>
+                        </div>
+                        <div className={styles.contactItem}>
+                            <h2 className={styles.secondaryHeader}>Phone</h2>
+                            <span className={styles.text}>+995 958 23 08 23</span>
+                        </div>
+                        <div className={styles.contactItem}>
+                            <h2 className={styles.secondaryHeader}>Address</h2>
+                            <span className={styles.text}>Cyprus, Limassol, 36 Agias Fylaxeos, 3rd Floor</span>
+                        </div>
+                    </div>
+                    <div className={styles.imageContainer}>
+                        <div className={styles.imageBg}/>
+                    </div>
+                </div>
+                <a 
+                    className={styles.scrollToTop}
+                    onClick={() => handleScroll('hero')}
+                >
+                    <Image 
+                        src="/icons/arrow_downward.svg"
+                        alt='scroll to top'
+                        width={20}
+                        height={20}
+                    />
+                </a>
             </div>
             <Footer />
         </>
