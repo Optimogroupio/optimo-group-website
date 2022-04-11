@@ -101,7 +101,7 @@ export default function Mobile() {
                     <h1 className={styles.title}> Affiliate Project </h1>
                     <span className={styles.text}>
                         10 successful projects in the affiliate marketing igaming field. 
-                        Now we are in 21 countries and still growing {'<3'} 
+                        Now we are in 21 countries and still growing {'<3 '} 
                         We go worldwide to deliver unbelievable results for our users and partners.
                     </span>
                 </div>
@@ -127,6 +127,28 @@ export default function Mobile() {
                         </div>
                     </div>
                 </div>
+                {/* Social Media */}
+                <div className={styles.socialMedia}>
+                    <h1 className={styles.title}>Betting Social Media</h1>
+                    <span className={styles.text}>
+                        Betting Social Media unifies a gambling-loving community. 
+                        Tipsters from all over the world share their predictions for various sporting events. 
+                        Customers have the opportunity to get in touch with each other, follow, discuss, engage, and more.
+                        Best tipsters have a chance to win various prizes and rewards.
+                    </span>
+                    <div className={styles.imageContainer}>
+                        <div className={styles.imageBg}/>
+                        <div className={styles.image}>
+                            <Image
+                                src="/images/Betting Social Media.png"
+                                alt="Betting Social Media"
+                                width={300}
+                                height={300}
+                            />
+                        </div>
+                    </div>
+                </div>
+                
                 <div />
             </div>
             <Footer />

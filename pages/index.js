@@ -139,7 +139,7 @@ export default function Home() {
                         </h1>
                         <span className={styles.text}>
                             10 successful projects in the affiliate marketing igaming field. 
-                            Now we are in 21 countries and still growing {'<3'} 
+                            Now we are in 21 countries and still growing {'<3 '} 
                             We go worldwide to deliver unbelievable results for our users and partners.
                         </span>
                     </div>
