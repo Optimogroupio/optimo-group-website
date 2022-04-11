@@ -29,7 +29,7 @@ export default function Home() {
     const streamingSolutionsOpacity = useTransform(scrollY, [2700, 3400, 3600, 4400], [0, 1, 1, 0])
     const startupIncubatorOpacity = useTransform(scrollY, [3500, 4400, 4600, 5000], [0, 1, 1, 0])
     const projectsParallax = useTransform(scrollY, [5700, 5900], [0, 100])
-    const [heroText, setHeroText] = useState('Hello')
+    const [heroText, setHeroText] = useState('Digital World')
     let index = 0;
     
     useEffect(() => {
@@ -42,7 +42,7 @@ export default function Home() {
         return () => {
             clearInterval(interval)
         }
-    }, [])
+    }, [index])
 
     function handleScroll(id){
         const element = document.getElementById(id)
@@ -192,7 +192,7 @@ export default function Home() {
                         <span className={styles.text}>
                             Variety of streaming solutions for companies interested in promoting their products and services. 
                             with a large network of professional streamers, we can reach different audiences worldwide. 
-                            Optimo Group owns dedicated streamers platform, "Streamers Club" to enhance business solutions.
+                            Optimo Group owns dedicated streamers platform, {`"`}Streamers Club{`"`} to enhance business solutions.
                         </span>
                     </div>
                     <div 
@@ -245,7 +245,7 @@ export default function Home() {
                                 translateY: projectsParallax
                             }}
                         >
-                            We are building in-house international projects to make people's life better,
+                            We are building in-house international projects to make people{`'`}s life better,
                             like Marketing automation software, and crypto payment gateways.
                         </motion.span>
                     </div>
@@ -297,6 +297,7 @@ export default function Home() {
                 >
                     <Image 
                         src="/icons/arrow_downward.svg"
+                        alt='scroll to top'
                         width={20}
                         height={20}
                     />
