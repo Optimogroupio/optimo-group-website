@@ -37,7 +37,7 @@ export default function Home() {
                 clearInterval(interval)
             }
             setHeroText(words[index++])
-        }, 1000)
+        }, 750)
         return () => {
             clearInterval(interval)
         }

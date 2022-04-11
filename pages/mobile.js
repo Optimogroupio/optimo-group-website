@@ -32,7 +32,7 @@ export default function Mobile() {
                 clearInterval(interval)
             }
             setHeroText(words[index++])
-        }, 1000)
+        }, 750)
         return () => {
             clearInterval(interval)
         }
