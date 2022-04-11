@@ -24,7 +24,7 @@ export default function Mobile() {
     const affiliateProjectTranslate = useTransform(scrollY, [300, 500], ['-100%', '0%'])
     const [heroText, setHeroText] = useState(words[0])
 
-    let index = 0;
+    let index = 1;
     
     useEffect(() => {
         const interval = setInterval(() => {
@@ -32,27 +32,27 @@ export default function Mobile() {
                 clearInterval(interval)
             }
             setHeroText(words[index++])
-        }, 2000)
+        }, 1000)
         return () => {
             clearInterval(interval)
         }
     }, [index])
 
-    function handleScroll(id){
-        const element = document.getElementById(id)
-        element.scrollIntoView({behavior: 'smooth', block: 'center'})
-    }
+    // function handleScroll(id){
+    //     const element = document.getElementById(id)
+    //     element.scrollIntoView({behavior: 'smooth', block: 'center'})
+    // }
 
-    function printScroll(){
-        console.log(window.scrollY)
-    }
+    // function printScroll(){
+    //     console.log(window.scrollY)
+    // }
 
-    useEffect(() => {
-        window.addEventListener('scroll', printScroll)
-        return () => {
-            window.removeEventListener('scroll', printScroll)
-        }
-    }, [])
+    // useEffect(() => {
+    //     window.addEventListener('scroll', printScroll)
+    //     return () => {
+    //         window.removeEventListener('scroll', printScroll)
+    //     }
+    // }, [])
 
     return (
         <>
