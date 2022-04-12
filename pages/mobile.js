@@ -29,7 +29,7 @@ export default function Mobile() {
     const streamingSolutionsOpacity = useTransform(scrollY, [1900, 2300, 2700, 3100], [0, 1, 1, 0])
     const streamingSolutionsTranslate = useTransform(scrollY, [1900, 2300], ['100%', '0%'])
     const startupIncubatorOpacity = useTransform(scrollY, [2700, 3100, 3500, 3900], [0, 1, 1, 0])
-    const startupIncubatorTranslate = useTransform(scrollY, [2700, 3100], ['-100%', '0%'])
+    const startupIncubatorTranslate = useTransform(scrollY, [2650, 3050], ['-100%', '0%'])
     const projectsOpacity = useTransform(scrollY, [3300, 3700, 4100, 4500], [0, 1, 1, 0])
     const projectsTranslate = useTransform(scrollY, [3200, 3700], ['100%', '0%'])
     const [heroText, setHeroText] = useState(words[0])
@@ -99,8 +99,8 @@ export default function Mobile() {
                         <Image
                             src="/icons/arrow_downward.svg"
                             alt="Scroll Down"
-                            width={30}
-                            height={30}
+                            width={20}
+                            height={20}
                         />
                     </div>
                     <span>Down</span>
@@ -334,7 +334,18 @@ export default function Mobile() {
                         </div>
                     </div>
                     <div className={styles.imageContainer}>
-                        <div className={styles.imageBg}/>
+                        {/* <div className={styles.imageBg}/> */}
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29125.16342184528!2d33.033267630498244!3d34.676561220432966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14e73305db59320d%3A0xec1740b1cbe4d64a!2zQWdpYXMgRmlsYXhlb3MgMzYsIExpbWFzc29sLCDQmtC40L_RgA!5e0!3m2!1sru!2sge!4v1649756462140!5m2!1sru!2sge" 
+                            width="600" 
+                            height="450" 
+                            style={{
+                                border: 0
+                            }} 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                        />
                     </div>
                 </div>
             </div>

@@ -2,8 +2,8 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
     margin-top: 150px;
     gap: 150px;
     z-index: 2;
@@ -127,6 +127,7 @@
     height: 200px;
 }
 .affiliateProject .title{
+    left: 10px;
     top: -25px;
     position: relative;
 }
@@ -162,7 +163,7 @@
 .socialMedia .imageContainer{
     width: 100%;
     height: 350px;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 /* Streaming Solutions */
 .streamingSolutions{
@@ -208,7 +209,7 @@
 .projects .imageContainer{
     width: 100%;
     height: 200px;
-    margin-top: 50px;
+    margin-top: 100px;
     margin-bottom: 20px;
 }
 /* Contact Us */
