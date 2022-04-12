@@ -7,12 +7,12 @@
     margin-top: 150px;
     gap: 150px;
     z-index: 2;
-    background-image: url(/images/lines.svg);
+    /* background-image: url(/images/lines.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-size: 150%;
     background-position-y: 7%;
-    background-position-x: 50%;
+    background-position-x: 50%; */
     overflow: hidden;
 }
 .backgroundImage{
@@ -23,6 +23,12 @@
     height: 40vh;
     background-color: #333C45;
     z-index: 1;
+    background-image: url(/images/lines.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 200%;
+    overflow: hidden;
+    background-position: center;
 }
 .highlight{
     color: var(--highlight-color);
