@@ -29,7 +29,7 @@ export default function Mobile() {
     const socialMediaTranslate = useTransform(scrollY, [1200, 1600], ['-100%', '0%'])
     const streamingSolutionsOpacity = useTransform(scrollY, [1900, 2300, 2700, 3100], [0, 1, 1, 0])
     const streamingSolutionsTranslate = useTransform(scrollY, [1900, 2300], ['100%', '0%'])
-    const startupIncubatorOpacity = useTransform(scrollY, [2800, 3800, 3600, 4000], [0, 1, 1, 0])
+    const startupIncubatorOpacity = useTransform(scrollY, [2800, 3200, 3600, 4200], [0, 1, 1, 0])
     const startupIncubatorTranslate = useTransform(scrollY, [2750, 3150], ['-100%', '0%'])
     const projectsOpacity = useTransform(scrollY, [3400, 3800, 4200, 4600], [0, 1, 1, 0])
     const projectsTranslate = useTransform(scrollY, [3300, 3800], ['100%', '0%'])
