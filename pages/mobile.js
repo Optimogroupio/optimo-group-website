@@ -29,10 +29,10 @@ export default function Mobile() {
     const socialMediaTranslate = useTransform(scrollY, [1200, 1600], ['-100%', '0%'])
     const streamingSolutionsOpacity = useTransform(scrollY, [1900, 2300, 2700, 3100], [0, 1, 1, 0])
     const streamingSolutionsTranslate = useTransform(scrollY, [1900, 2300], ['100%', '0%'])
-    const startupIncubatorOpacity = useTransform(scrollY, [2700, 3100, 3500, 3900], [0, 1, 1, 0])
-    const startupIncubatorTranslate = useTransform(scrollY, [2650, 3050], ['-100%', '0%'])
-    const projectsOpacity = useTransform(scrollY, [3300, 3700, 4100, 4500], [0, 1, 1, 0])
-    const projectsTranslate = useTransform(scrollY, [3200, 3700], ['100%', '0%'])
+    const startupIncubatorOpacity = useTransform(scrollY, [2800, 3800, 3600, 4000], [0, 1, 1, 0])
+    const startupIncubatorTranslate = useTransform(scrollY, [2750, 3150], ['-100%', '0%'])
+    const projectsOpacity = useTransform(scrollY, [3400, 3800, 4200, 4600], [0, 1, 1, 0])
+    const projectsTranslate = useTransform(scrollY, [3300, 3800], ['100%', '0%'])
     const [heroText, setHeroText] = useState(words[0])
 
     let index = 1;
@@ -246,8 +246,8 @@ export default function Mobile() {
                             <Image
                                 src="/images/Streaming Solutions.png"
                                 alt="Streaming Solutions"
-                                width={250}
-                                height={250}
+                                width={350}
+                                height={350}
                             />
                         </div>
                     </div>
@@ -331,20 +331,17 @@ export default function Mobile() {
                             <span className={styles.text}>Cyprus, Limassol, 36 Agias Fylaxeos, 3rd Floor</span>
                         </div>
                     </div>
-                    <div className={styles.imageContainer}>
-                        {/* <div className={styles.imageBg}/> */}
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29125.16342184528!2d33.033267630498244!3d34.676561220432966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14e73305db59320d%3A0xec1740b1cbe4d64a!2zQWdpYXMgRmlsYXhlb3MgMzYsIExpbWFzc29sLCDQmtC40L_RgA!5e0!3m2!1sru!2sge!4v1649756462140!5m2!1sru!2sge" 
-                            width="600" 
-                            height="250" 
-                            style={{
-                                border: 0
-                            }} 
-                            allowFullScreen="" 
-                            loading="lazy" 
-                            referrerPolicy="no-referrer-when-downgrade"
-                        />
-                    </div>
+                    <a target="_blank" href="https://www.google.com/maps/place/Agias+Filaxeos+36,+Limassol,+%D0%9A%D0%B8%D0%BF%D1%80/@34.6804168,33.0379092,17z/data=!3m1!4b1!4m5!3m4!1s0x14e73305db59320d:0xec1740b1cbe4d64a!8m2!3d34.6804124!4d33.0400979" className={styles.imageContainer}>
+                        <div className={styles.image}>
+                            <Image
+                                src="/images/Maps.png"
+                                alt="Maps"
+                                width={980}
+                                height={700}
+                                quality={100}
+                            />
+                        </div>
+                    </a>
                 </div>
             </div>
                 <a 
