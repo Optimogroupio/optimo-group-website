@@ -10,6 +10,13 @@ body {
     scroll-snap-type: y proximity;
     scroll-behavior: smooth;
 }
+@media screen and (min-width: 2560px) {
+    html,
+    body {
+        display: flex;
+        justify-content: center;
+    }    
+}
 @font-face {
     font-family: 'Titillium Web';
     src: url(/fonts/TitilliumWeb-ExtraLight.ttf);
