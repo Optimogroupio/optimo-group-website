@@ -28,6 +28,7 @@ export default function Home() {
     const startupIncubatorImage = useTransform(scrollY, [3700, 4400], ['-100%', '0%'])
     const startupIncubatorOpacity = useTransform(scrollY, [3500, 4400, 4800, 5200], [0, 1, 1, 0])
     const projectsParallax = useTransform(scrollY, [5700, 5900], [0, 100])
+    const projectsOpacity = useTransform(scrollY, [5100, 5300, 5900, 6300], [0, 1, 1, 0])
     const [heroText, setHeroText] = useState(words[0])
     let index = 1;
     
@@ -271,7 +272,13 @@ export default function Home() {
                     </div>
                 </motion.div>
                 {/* Projects */}
-                <div id='projects' className={styles.projects}>
+                <motion.div 
+                    id='projects' 
+                    className={styles.projects}
+                    style={{
+                        opacity: projectsOpacity
+                    }}
+                >
                     <div className={styles.column}>
                         <h2 className={styles.secondaryHeader}>To make peoples life better</h2>
                         <h1 className={styles.title}>Projects</h1>
@@ -298,7 +305,7 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </motion.div>
                 {/* Contact Us */}
                 <div id='contact' className={styles.contactUs}>
                     <div className={styles.column}>
