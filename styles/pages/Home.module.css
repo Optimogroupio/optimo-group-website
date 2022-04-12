@@ -35,7 +35,7 @@
 }
 .title{
     font-weight: 600;
-    font-size: 72px;
+    font-size: 64px;
 }
 .secondaryHeader{
     color: var(--secondary-header-color);
@@ -172,7 +172,7 @@
 }
 .affiliateProject .secondaryHeader{
     position: relative;
-    left: -50px;
+    left: -100px;
 }
 .affiliateProject .column:first-child{
     width: 60%;
@@ -180,13 +180,13 @@
 }
 .affiliateProject .column:nth-child(2){
     width: 40%;
-    padding-top: 100px;
+    /* padding-top: 100px; */
 }
-.affiliateProject .title:first-child{
+.affiliateProject .title:nth-child(2){
     position: relative;
     left: -100px;
 }
-.affiliateProject .title:nth-child(2){
+.affiliateProject .title:nth-child(3){
     position: relative;
     left: -50px;
 }

@@ -104,12 +104,17 @@ export default function Home() {
                     </span>
                 </div>
                 {/* Affiliate project */}
-                <div id="affiliateProject" className={styles.affiliateProject}>
+                <motion.div 
+                    id="affiliateProject" 
+                    className={styles.affiliateProject}
+                    style={{
+                        opacity: affiliateNetworkOpacity,
+                    }}
+                >
                     <motion.div 
                         className={styles.column}
                         style={{
                             translateY: affiliateNetworkParallax,
-                            opacity: affiliateNetworkOpacity
                         }}
                     >
                         <div className={styles.imageBg} />
@@ -136,7 +141,7 @@ export default function Home() {
                             We go worldwide to deliver unbelievable results for our users and partners.
                         </span>
                     </div>
-                </div>
+                </motion.div>
                 {/* Affiliate  */}
                 <div id="affiliate" className={styles.affiliateBlock}>
                     <h1 className={styles.title}>Affiliate Network</h1>
