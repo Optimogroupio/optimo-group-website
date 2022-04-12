@@ -98,15 +98,8 @@ export default function Home() {
                         <span className={styles.highlight}>{heroText}</span>
                     </h1>
                     <span className={styles.text}>
-                        Lorem ipsum dolor, sit amet consectetur
-                        adipisicing elit. Quis harum similique facere
-                        iure debitis, dolorum nobis doloribus quod officia odit.
-                        Lorem ipsum dolor, sit amet consectetur
-                        adipisicing elit. Quis harum similique facere
-                        iure debitis, dolorum nobis doloribus quod officia odit.
-                        Lorem ipsum dolor, sit amet consectetur
-                        adipisicing elit. Quis harum similique facere
-                        iure debitis, dolorum nobis doloribus quod officia odit.
+                        The key to business success is optimization. We are OPTIMO…
+                        we deliver tomorrow{"'"}s solutions today, we bring the future closer.
                     </span>
                 </div>
                 {/* Affiliate project */}

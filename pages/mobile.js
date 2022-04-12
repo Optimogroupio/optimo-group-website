@@ -21,7 +21,7 @@ export default function Mobile() {
     const left = useTransform(scrollY, [0, 400], ['5%', '0%'])
     const opacity = useTransform(scrollY, [0, 400], [1, 0])
     const affiliateProjectOpacity = useTransform(scrollY, [0, 400, 600, 1100], [0, 1, 1, 0])
-    const affiliateProjectTranslate = useTransform(scrollY, [300, 500], ['-100%', '0%'])
+    const affiliateProjectTranslate = useTransform(scrollY, [200, 400], ['-100%', '0%'])
     const affiliateNetworkOpacity = useTransform(scrollY, [800, 1100, 1600, 1900], [0, 1, 1, 0])
     const affiliateNetworkTranslate = useTransform(scrollY, [800, 1000], ['100%', '0%'])
     const socialMediaOpacity = useTransform(scrollY, [1200, 1600, 2000, 2400], [0, 1, 1, 0])
@@ -114,15 +114,8 @@ export default function Mobile() {
                         <span className={styles.highlight}>{heroText}</span>
                     </h1>
                     <span className={styles.text}>
-                        Lorem ipsum dolor, sit amet consectetur
-                        adipisicing elit. Quis harum similique facere
-                        iure debitis, dolorum nobis doloribus quod officia odit.
-                        Lorem ipsum dolor, sit amet consectetur
-                        adipisicing elit. Quis harum similique facere
-                        iure debitis, dolorum nobis doloribus quod officia odit.
-                        Lorem ipsum dolor, sit amet consectetur
-                        adipisicing elit. Quis harum similique facere
-                        iure debitis, dolorum nobis doloribus quod officia odit.
+                        The key to business success is optimization. We are OPTIMO…
+                        we deliver tomorrow{"'"}s solutions today, we bring the future closer.
                     </span>
                 </div>
                 {/* Affiliate Project */}
