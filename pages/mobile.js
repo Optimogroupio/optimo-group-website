@@ -20,6 +20,7 @@ export default function Mobile() {
     const top = useTransform(scrollY, [0, 400], ['28%', '0%'])
     const left = useTransform(scrollY, [0, 400], ['5%', '0%'])
     const opacity = useTransform(scrollY, [0, 400], [1, 0])
+    const bgPosition = useTransform(scrollY, [0, 5000], ['50%', '-300%'])
     const affiliateProjectOpacity = useTransform(scrollY, [0, 400, 600, 1100], [0, 1, 1, 0])
     const affiliateProjectTranslate = useTransform(scrollY, [200, 400], ['-100%', '0%'])
     const affiliateNetworkOpacity = useTransform(scrollY, [600, 1100, 1600, 1900], [0, 1, 1, 0])
@@ -81,7 +82,8 @@ export default function Mobile() {
                     width: expandWidth,
                     height: expandHeight,
                     top: top,
-                    left: left
+                    left: left,
+                    backgroundPositionY: bgPosition,
                 }}
             />
             <motion.div 
@@ -338,13 +340,13 @@ export default function Mobile() {
                         <iframe 
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29125.16342184528!2d33.033267630498244!3d34.676561220432966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14e73305db59320d%3A0xec1740b1cbe4d64a!2zQWdpYXMgRmlsYXhlb3MgMzYsIExpbWFzc29sLCDQmtC40L_RgA!5e0!3m2!1sru!2sge!4v1649756462140!5m2!1sru!2sge" 
                             width="600" 
-                            height="450" 
+                            height="250" 
                             style={{
                                 border: 0
                             }} 
-                            allowfullscreen="" 
+                            allowFullScreen="" 
                             loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade"
+                            referrerPolicy="no-referrer-when-downgrade"
                         />
                     </div>
                 </div>

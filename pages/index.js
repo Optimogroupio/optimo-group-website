@@ -30,6 +30,7 @@ export default function Home() {
     const top = useTransform(scrollY, [0, 400], ['35%', '0%'])
     const left = useTransform(scrollY, [0, 400], ['10%', '0%'])
     const opacity = useTransform(scrollY, [0, 400], [1, 0])
+    const bgPosition = useTransform(scrollY, [0, 2900, 5900], ['40%', '100%', '200%'])
     const affiliateNetworkParallax = useTransform(scrollY, [0, 400, 600, 1000], [0, -100, -150, -200])
     const affiliateProjectParallax = useTransform(scrollY, [1800, 2400], [0, -200])
     const socialMediaParallax = useTransform(scrollY, [2700, 2900], [0, -100])
@@ -96,7 +97,8 @@ export default function Home() {
                         height: expandHeight,
                         width: expandWidth,
                         top: top,
-                        left: left
+                        left: left,
+                        backgroundPositionY: bgPosition
                 }}
             />
             <motion.div 
@@ -355,9 +357,9 @@ export default function Home() {
                                 style={{
                                     border: 0
                                 }} 
-                                allowfullscreen="" 
+                                allowFullScreen="" 
                                 loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade"
+                                referrerPolicy="no-referrer-when-downgrade"
                             />
                         </div>
                     </div>
