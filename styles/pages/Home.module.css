@@ -239,7 +239,7 @@
     scroll-snap-align: center;
 }
 .socialMedia .imageBg{
-    background-color: #FF893B;
+    background-color: #bd682f;
 }
 .socialMedia .column:first-child{
     position: absolute;
@@ -311,7 +311,7 @@
 
 }
 .startupIncubator .imageBg{
-    background-color: #FF893B;
+    background-color: #bd682f;
 }
 .startupIncubator .column:first-child{
     width: 60%;
