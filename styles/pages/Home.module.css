@@ -35,7 +35,7 @@
 }
 .title{
     font-weight: 600;
-    font-size: 64px;
+    font-size: 72px;
 }
 .secondaryHeader{
     color: var(--secondary-header-color);
@@ -43,7 +43,7 @@
 }
 .text{
     display: flex;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 300;
     color: var(--text-color);
 }
@@ -125,7 +125,6 @@
     /* z-index: 2; */
     padding: 0 50px 0 25px;
     scroll-snap-align: center;
-    scroll-padding: 400px;
 }
 .heroBlock .title{
     width: 80%;
@@ -169,8 +168,7 @@
     display: flex;
     flex-direction: row;
     /* z-index: 2; */
-    scroll-snap-align: center;
-    scroll-padding: 400px;
+    scroll-snap-align: center;  
 }
 .affiliateProject .secondaryHeader{
     position: relative;
@@ -203,10 +201,13 @@
     /* z-index: 2; */
     align-items: flex-end;
     scroll-snap-align: center;
-    scroll-padding: 400px;
+
 }
 .affiliateBlock .imageBg{
     background-color: #729CA2;
+}
+.affiliateBlock .image{
+    left: 100px;
 }
 .affiliateBlock .secondaryHeader, .affiliateProject .title{
     width: fit-content;
@@ -214,10 +215,10 @@
 }
 .affiliateBlock .text{
     text-align: right;
-    width: 60%;
+    width: 50%;
 }
 .affiliateBlock .imageContainer{
-    margin-top: 25px;
+    margin-top: 70px;
     display: flex;
     align-self: flex-start;
     width: 65%;
@@ -226,12 +227,12 @@
 /* Social Media */
 .socialMedia{
     position: relative;
+    display: flex;
     flex-direction: row;
     width: 100%;
     /* z-index: 2; */
     min-height: 600px;
     scroll-snap-align: center;
-    scroll-padding: 400px;
 }
 .socialMedia .imageBg{
     background-color: #FF893B;
@@ -266,10 +267,10 @@
     display: flex;
     flex-direction: column;
     /* z-index: 2; */
-    gap: 150px;
+    gap: 120px;
     overflow: hidden;
     scroll-snap-align: center;
-    scroll-padding: 400px;
+
 }
 .streamingSolutions .imageBg{
     background-color: #729CA2;
@@ -303,7 +304,7 @@
     /* z-index: 2; */
     overflow: hidden;
     scroll-snap-align: center;
-    scroll-padding: 400px;
+
 }
 .startupIncubator .imageBg{
     background-color: #FF893B;
@@ -349,7 +350,7 @@
     /* z-index: 2; */
     gap: 50px;
     scroll-snap-align: center;
-    scroll-padding: 400px;
+
 }
 .projects .imageBg{
     background-color: #424a52;
