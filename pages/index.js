@@ -314,7 +314,7 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    <a target="_blank" href="https://www.google.com/maps/place/Agias+Filaxeos+36,+Limassol,+%D0%9A%D0%B8%D0%BF%D1%80/@34.6804168,33.0379092,17z/data=!3m1!4b1!4m5!3m4!1s0x14e73305db59320d:0xec1740b1cbe4d64a!8m2!3d34.6804124!4d33.0400979" className={styles.column}>
+                    <a rel="noreferrer" target="_blank" href="https://www.google.com/maps/place/Agias+Filaxeos+36,+Limassol,+%D0%9A%D0%B8%D0%BF%D1%80/@34.6804168,33.0379092,17z/data=!3m1!4b1!4m5!3m4!1s0x14e73305db59320d:0xec1740b1cbe4d64a!8m2!3d34.6804124!4d33.0400979" className={styles.column}>
                         <div className={styles.imageContainer}>
                             <div className={styles.image}>
                                 <Image
