@@ -4,7 +4,8 @@ import { motion, useTransform, useViewportScroll } from 'framer-motion'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import Footer from '../components/Footer'
-import { useRouter } from 'next/router'
+import { throttle } from 'throttle-debounce'
+import { debounce } from 'throttle-debounce'
 
 const words = [
     'Digital world',
@@ -12,7 +13,16 @@ const words = [
     'Users',
     'Everybody'
 ]
-
+const sections = [
+    'hero',
+    'affiliateProject',
+    'affiliate',
+    'socialMedia',
+    'streamingSolutions',
+    'startupIncubator',
+    'projects',
+    'contact'
+]
 export default function Home() {
     const { scrollY } = useViewportScroll()
     const expandWidth = useTransform(scrollY, [0, 400], ['80vw', '100vw'])
@@ -30,6 +40,7 @@ export default function Home() {
     const projectsParallax = useTransform(scrollY, [5700, 5900], [0, 100])
     const [heroText, setHeroText] = useState(words[0])
     let index = 1;
+    let scrollIndex = 1;
     
     useEffect(() => {
         const interval = setInterval(() => {
@@ -47,6 +58,26 @@ export default function Home() {
         const element = document.getElementById(id)
         element.scrollIntoView({behavior: 'smooth', block: 'center'})
     }
+
+    // function stickyScroll(e){
+    //     console.log(sections[scrollIndex], e.deltaY)
+    //     if (e.deltaY > 0) {
+    //         if (scrollIndex+1 > sections.length - 1) return
+    //         const element = document.getElementById(sections[scrollIndex++])
+    //         element.scrollIntoView({behavior: 'smooth', block: 'center'})
+    //     } else {
+    //         if (scrollIndex-1 < 0) return
+    //         const element = document.getElementById(sections[scrollIndex--])
+    //         element.scrollIntoView({behavior: 'smooth', block: 'center'})
+    //     }
+    // }
+
+    // useEffect(() => {
+    //     window.addEventListener('wheel', throttle(500, stickyScroll, {noTrailing: true}))
+    //     return () => {
+    //         window.removeEventListener('wheel', throttle(500, stickyScroll, {noTrailing: true}))
+    //     }
+    // }, [])
 
     return (
         <>
@@ -293,7 +324,7 @@ export default function Home() {
                     </div>
                 </div>
                 {/* Contact Us */}
-                <div className={styles.contactUs}>
+                <div id='contact' className={styles.contactUs}>
                     <div className={styles.column}>
                         <div className={styles.textContainer}>
                             <h2 className={styles.secondaryHeader}>Have Any Questions? Don{`'`}t be shy</h2>
