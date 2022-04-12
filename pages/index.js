@@ -23,7 +23,7 @@ export default function Home() {
     const affiliateNetworkOpacity = useTransform(scrollY, [0, 500, 700, 1100], [0, 1, 1, 0])
     const affiliateProjectParallax = useTransform(scrollY, [1800, 2400], [0, -200])
     const socialMediaParallax = useTransform(scrollY, [2700, 2900], [0, -100])
-    const streamingSolutionsImage = useTransform(scrollY, [3800, 4400], ['0%', '60%'])
+    const streamingSolutionsImage = useTransform(scrollY, [3800, 4400], ['0%', '-60%'])
     const streamingSolutionsOpacity = useTransform(scrollY, [2700, 3400, 3600, 4400], [0, 1, 1, 0])
     const startupIncubatorImage = useTransform(scrollY, [3700, 4400], ['-100%', '0%'])
     const startupIncubatorOpacity = useTransform(scrollY, [3500, 4400, 4800, 5200], [0, 1, 1, 0])
