@@ -134,10 +134,17 @@
 }
 .affiliateProject .title{
     left: 10px;
-    top: -25px;
+    top: -50px;
+    position: relative;
+}
+.affiliateProject .secondaryHeader{
+    left: 10px;
+    top: -40px;
     position: relative;
 }
 .affiliateProject .text{
+    position: relative;
+    top: -50px;
     overflow: hidden;
 }
 /* Affiliate Network */

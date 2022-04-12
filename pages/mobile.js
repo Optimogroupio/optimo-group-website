@@ -139,6 +139,7 @@ export default function Mobile() {
                             />
                         </div>
                     </div>
+                    <h2 className={styles.secondaryHeader}>Global 10 Projects</h2>
                     <h1 className={styles.title}> Affiliate Project </h1>
                     <motion.span 
                         className={styles.text}
@@ -160,7 +161,6 @@ export default function Mobile() {
                         opacity: affiliateNetworkOpacity
                     }}
                 >
-                    <h2 className={styles.secondaryHeader}>Global 10 Projects</h2>
                     <h1 className={styles.title}>Affiliate Network</h1>
                     <motion.span 
                         className={styles.text}
@@ -325,10 +325,6 @@ export default function Mobile() {
                         <div className={styles.contactItem}>
                             <h2 className={styles.secondaryHeader}>Email</h2>
                             <span className={styles.text}>info@optimogroup.io</span>
-                        </div>
-                        <div className={styles.contactItem}>
-                            <h2 className={styles.secondaryHeader}>Phone</h2>
-                            <span className={styles.text}>+995 958 23 08 23</span>
                         </div>
                         <div className={styles.contactItem}>
                             <h2 className={styles.secondaryHeader}>Address</h2>

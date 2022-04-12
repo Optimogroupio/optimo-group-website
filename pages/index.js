@@ -13,16 +13,6 @@ const words = [
     'Users',
     'Everybody'
 ]
-const sections = [
-    'hero',
-    'affiliateProject',
-    'affiliate',
-    'socialMedia',
-    'streamingSolutions',
-    'startupIncubator',
-    'projects',
-    'contact'
-]
 export default function Home() {
     const { scrollY } = useViewportScroll()
     const expandWidth = useTransform(scrollY, [0, 400], ['80vw', '100vw'])
@@ -31,7 +21,8 @@ export default function Home() {
     const left = useTransform(scrollY, [0, 400], ['10%', '0%'])
     const opacity = useTransform(scrollY, [0, 400], [1, 0])
     const bgPosition = useTransform(scrollY, [0, 2900, 5900], ['40%', '100%', '200%'])
-    const affiliateNetworkParallax = useTransform(scrollY, [0, 400, 600, 1000], [0, -100, -150, -200])
+    const affiliateNetworkParallax = useTransform(scrollY, [0, 400, 600, 1000], [100, 100, 100, -200])
+    const affiliateNetworkOpacity = useTransform(scrollY, [0, 500, 700, 1100], [0, 1, 1, 0])
     const affiliateProjectParallax = useTransform(scrollY, [1800, 2400], [0, -200])
     const socialMediaParallax = useTransform(scrollY, [2700, 2900], [0, -100])
     const streamingSolutionsImage = useTransform(scrollY, [3800, 4400], ['0%', '60%'])
@@ -41,7 +32,6 @@ export default function Home() {
     const projectsParallax = useTransform(scrollY, [5700, 5900], [0, 100])
     const [heroText, setHeroText] = useState(words[0])
     let index = 1;
-    let scrollIndex = 1;
     
     useEffect(() => {
         const interval = setInterval(() => {
@@ -59,26 +49,6 @@ export default function Home() {
         const element = document.getElementById(id)
         element.scrollIntoView({behavior: 'smooth', block: 'center'})
     }
-
-    // function stickyScroll(e){
-    //     console.log(sections[scrollIndex], e.deltaY)
-    //     if (e.deltaY > 0) {
-    //         if (scrollIndex+1 > sections.length - 1) return
-    //         const element = document.getElementById(sections[scrollIndex++])
-    //         element.scrollIntoView({behavior: 'smooth', block: 'center'})
-    //     } else {
-    //         if (scrollIndex-1 < 0) return
-    //         const element = document.getElementById(sections[scrollIndex--])
-    //         element.scrollIntoView({behavior: 'smooth', block: 'center'})
-    //     }
-    // }
-
-    // useEffect(() => {
-    //     window.addEventListener('wheel', throttle(500, stickyScroll, {noTrailing: true}))
-    //     return () => {
-    //         window.removeEventListener('wheel', throttle(500, stickyScroll, {noTrailing: true}))
-    //     }
-    // }, [])
 
     return (
         <>
@@ -140,7 +110,8 @@ export default function Home() {
                     <motion.div 
                         className={styles.column}
                         style={{
-                            translateY: affiliateNetworkParallax
+                            translateY: affiliateNetworkParallax,
+                            opacity: affiliateNetworkOpacity
                         }}
                     >
                         <div className={styles.imageBg} />
@@ -154,6 +125,7 @@ export default function Home() {
                         </div>
                     </motion.div>
                     <div className={styles.column}>
+                        <h2 className={styles.secondaryHeader}>Global 10 Projects</h2>
                         <h1 className={styles.title}>
                             Affiliate
                         </h1>
@@ -169,7 +141,6 @@ export default function Home() {
                 </div>
                 {/* Affiliate  */}
                 <div id="affiliate" className={styles.affiliateBlock}>
-                    <h2 className={styles.secondaryHeader}>Global 10 Projects</h2>
                     <h1 className={styles.title}>Affiliate Network</h1>
                     <span className={styles.text}>
                         Multi-brand affiliate management software for your website.
@@ -188,8 +159,8 @@ export default function Home() {
                             <Image 
                                 src="/images/Affiliate Project.png"
                                 alt="Affiliate Project"
-                                width={800}
-                                height={800}
+                                width={700}
+                                height={700}
                             />
                         </div>
                     </motion.div>
@@ -338,10 +309,6 @@ export default function Home() {
                                 <span className={styles.text}>info@optimogroup.io</span>
                             </div>
                             <div className={styles.contactItem}>
-                                <h2 className={styles.secondaryHeader}>Phone</h2>
-                                <span className={styles.text}>+995 958 23 08 23</span>
-                            </div>
-                            <div className={styles.contactItem}>
                                 <h2 className={styles.secondaryHeader}>Address</h2>
                                 <span className={styles.text}>Cyprus, Limassol, 36 Agias Fylaxeos, 3rd Floor</span>
                             </div>
@@ -349,18 +316,10 @@ export default function Home() {
                     </div>
                     <div className={styles.column}>
                         <div className={styles.imageContainer}>
-                            {/* <div className={styles.imageBg} /> */}
-                            <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29125.16342184528!2d33.033267630498244!3d34.676561220432966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14e73305db59320d%3A0xec1740b1cbe4d64a!2zQWdpYXMgRmlsYXhlb3MgMzYsIExpbWFzc29sLCDQmtC40L_RgA!5e0!3m2!1sru!2sge!4v1649756462140!5m2!1sru!2sge" 
-                                width="600" 
-                                height="600" 
-                                style={{
-                                    border: 0
-                                }} 
-                                allowFullScreen="" 
-                                loading="lazy" 
-                                referrerPolicy="no-referrer-when-downgrade"
-                            />
+                            <div className={styles.imageBg} />
+                            <div className={styles.image}>
+                                
+                            </div>
                         </div>
                     </div>
                     <div className={styles.column}>
