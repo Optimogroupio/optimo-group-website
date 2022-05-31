@@ -31,7 +31,7 @@ export default function Home() {
     const projectsOpacity = useTransform(scrollY, [5100, 5300, 5900, 6300], [0, 1, 1, 0])
     const [heroText, setHeroText] = useState(words[0])
     let index = 1;
-    
+
     useEffect(() => {
         const interval = setInterval(() => {
             if (index === words.length - 1) {
@@ -44,59 +44,59 @@ export default function Home() {
         }
     }, [index])
 
-    function handleScroll(id){
+    function handleScroll(id) {
         const element = document.getElementById(id)
-        element.scrollIntoView({behavior: 'smooth', block: 'center'})
+        element.scrollIntoView({ behavior: 'smooth', block: 'center' })
     }
 
     return (
         <>
             <Head>
                 <title>Optimo Group</title>
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/logo.svg" />
                 <link rel='preload' href='/fonts/TitilliumWeb-Regular.ttf' as='font' type='font/ttf' crossOrigin='anonymous' />
                 <link rel='preload' href='/fonts/TitilliumWeb-Bold.ttf' as='font' type='font/ttf' crossOrigin='anonymous' />
                 <link rel='preload' href='/fonts/TitilliumWeb-Light.ttf' as='font' type='font/ttf' crossOrigin='anonymous' />
                 <link rel='preload' href='/fonts/TitilliumWeb-SemiBold.ttf' as='font' type='font/ttf' crossOrigin='anonymous' />
                 <link rel='preload' href='/fonts/TitilliumWeb-ExtraLight.ttf' as='font' type='font/ttf' crossOrigin='anonymous' />
             </Head>
-            <motion.div 
-                className={styles.backgroundImage} 
-                    style={{
-                        height: expandHeight,
-                        width: expandWidth,
-                        top: top,
-                        left: left,
-                        backgroundPositionY: bgPosition
+            <motion.div
+                className={styles.backgroundImage}
+                style={{
+                    height: expandHeight,
+                    width: expandWidth,
+                    top: top,
+                    left: left,
+                    backgroundPositionY: bgPosition
                 }}
             />
-            <motion.div 
-                    className={styles.scrollDownContainer}
-                    style={{
-                        opacity: opacity,
-                    }}
+            <motion.div
+                className={styles.scrollDownContainer}
+                style={{
+                    opacity: opacity,
+                }}
+            >
+                <div
+                    onClick={() => handleScroll('affiliateProject')}
+                    className={styles.scrollDown}
                 >
-                    <div 
-                        onClick={() => handleScroll('affiliateProject')}
-                        className={styles.scrollDown}
-                    >
-                        <span>Scroll</span>
-                        <div>
-                            <Image 
-                                src="/icons/arrow_downward.svg"
-                                alt="Scroll Down"
-                                width={30}
-                                height={30}
-                            />
-                        </div>
-                        <span>Down</span>
+                    <span>Scroll</span>
+                    <div>
+                        <Image
+                            src="/icons/arrow_downward.svg"
+                            alt="Scroll Down"
+                            width={30}
+                            height={30}
+                        />
                     </div>
+                    <span>Down</span>
+                </div>
             </motion.div>
             <div id="top" className={styles.container}>
                 {/* Hero */}
                 <div id="hero" className={styles.heroBlock}>
                     <h1 className={styles.title}>
-                        Optimal Solutions For: <br/>
+                        Optimal Solutions For: <br />
                         <span className={styles.highlight}>{heroText}</span>
                     </h1>
                     <span className={styles.text}>
@@ -105,14 +105,14 @@ export default function Home() {
                     </span>
                 </div>
                 {/* Affiliate project */}
-                <motion.div 
-                    id="affiliateProject" 
+                <motion.div
+                    id="affiliateProject"
                     className={styles.affiliateProject}
                     style={{
                         opacity: affiliateNetworkOpacity,
                     }}
                 >
-                    <motion.div 
+                    <motion.div
                         className={styles.column}
                         style={{
                             translateY: affiliateNetworkParallax,
@@ -137,8 +137,8 @@ export default function Home() {
                             Project
                         </h1>
                         <span className={styles.text}>
-                            10 successful projects in the affiliate marketing igaming field. 
-                            Now we are in 21 countries and still growing {'<3 '} 
+                            10 successful projects in the affiliate marketing igaming field.
+                            Now we are in 21 countries and still growing {'<3 '}
                             We go worldwide to deliver unbelievable results for our users and partners.
                         </span>
                     </div>
@@ -148,11 +148,11 @@ export default function Home() {
                     <h1 className={styles.title}>Affiliate Network</h1>
                     <span className={styles.text}>
                         Multi-brand affiliate management software for your website.
-                        Tailored digital solution to recruit affiliates and grow your affiliate network. 
-                        Increase Revenues. Dedicated Support. Multiple Marketing Tools. 
+                        Tailored digital solution to recruit affiliates and grow your affiliate network.
+                        Increase Revenues. Dedicated Support. Multiple Marketing Tools.
                         Real-time Insights. Real-time Data.
                     </span>
-                    <motion.div 
+                    <motion.div
                         className={styles.imageContainer}
                         style={{
                             translateY: affiliateProjectParallax
@@ -160,7 +160,7 @@ export default function Home() {
                     >
                         <div className={styles.imageBg} />
                         <div className={styles.image}>
-                            <Image 
+                            <Image
                                 src="/images/Affiliate Project.png"
                                 alt="Affiliate Project"
                                 width={630}
@@ -171,7 +171,7 @@ export default function Home() {
                 </div>
                 {/* Social Media */}
                 <div id="socialMedia" className={styles.socialMedia}>
-                    <motion.div 
+                    <motion.div
                         className={styles.column}
                         style={{
                             translateY: socialMediaParallax
@@ -179,8 +179,8 @@ export default function Home() {
                     >
                         <h1 className={styles.title}>Betting Social Media</h1>
                         <span className={styles.text}>
-                            Betting Social Media unifies a gambling-loving community. 
-                            Tipsters from all over the world share their predictions for various sporting events. 
+                            Betting Social Media unifies a gambling-loving community.
+                            Tipsters from all over the world share their predictions for various sporting events.
                             Customers have the opportunity to get in touch with each other, follow, discuss, engage, and more.
                             Best tipsters have a chance to win various prizes and rewards.
                         </span>
@@ -188,8 +188,8 @@ export default function Home() {
                     <div className={styles.column}>
                         <div className={styles.imageContainer}>
                             <div className={styles.imageBg} />
-                            <div className={styles.image} style={{right: 100, bottom: 0}}>
-                                <Image 
+                            <div className={styles.image} style={{ right: 100, bottom: 0 }}>
+                                <Image
                                     src="/images/Betting Social Media.png"
                                     alt="Betting Social Media"
                                     width={500}
@@ -200,8 +200,8 @@ export default function Home() {
                     </div>
                 </div>
                 {/* Streaming Solutions */}
-                <motion.div 
-                    id="streamingSolutions" 
+                <motion.div
+                    id="streamingSolutions"
                     className={styles.streamingSolutions}
                     style={{
                         opacity: streamingSolutionsOpacity
@@ -211,19 +211,19 @@ export default function Home() {
                         <h2 className={styles.secondaryHeader}>Streaming Projects and Platform</h2>
                         <h1 className={styles.title}>Streaming Solutions</h1>
                         <span className={styles.text}>
-                            Variety of streaming solutions for companies interested in promoting their products and services. 
-                            with a large network of professional streamers, we can reach different audiences worldwide. 
+                            Variety of streaming solutions for companies interested in promoting their products and services.
+                            with a large network of professional streamers, we can reach different audiences worldwide.
                             Optimo Group owns dedicated streamers platform, {`"`}Streamers Club{`"`} to enhance business solutions.
                         </span>
                     </div>
-                    <div 
+                    <div
                         className={styles.imageContainer}
                     >
-                        <motion.div 
+                        <motion.div
                             style={{
                                 translateX: streamingSolutionsImage
                             }}
-                            className={styles.imageBg} 
+                            className={styles.imageBg}
                         />
                         <div className={styles.image}>
                             <Image
@@ -236,8 +236,8 @@ export default function Home() {
                     </div>
                 </motion.div>
                 {/* Startup Incubator */}
-                <motion.div 
-                    id="startupIncubator" 
+                <motion.div
+                    id="startupIncubator"
                     className={styles.startupIncubator}
                     style={{
                         opacity: startupIncubatorOpacity
@@ -247,8 +247,8 @@ export default function Home() {
                         <h2 className={styles.secondaryHeader}>Create In-House</h2>
                         <h1 className={styles.title}>Startup Incubator</h1>
                         <div className={styles.imageContainer}>
-                            <motion.div 
-                                className={styles.imageBg} 
+                            <motion.div
+                                className={styles.imageBg}
                                 style={{
                                     translateX: startupIncubatorImage
                                 }}
@@ -265,15 +265,15 @@ export default function Home() {
                     </div>
                     <div className={styles.column}>
                         <span className={styles.text}>
-                            We assist new startups to succeed: solving some of the problems associated with mentoring, 
-                            training, and running startups by providing workspace and funding. Our Support means to 
+                            We assist new startups to succeed: solving some of the problems associated with mentoring,
+                            training, and running startups by providing workspace and funding. Our Support means to
                             take the form of access to experienced mentors with relevant area expertise.
                         </span>
                     </div>
                 </motion.div>
                 {/* Projects */}
-                <motion.div 
-                    id='projects' 
+                <motion.div
+                    id='projects'
                     className={styles.projects}
                     style={{
                         opacity: projectsOpacity
@@ -282,7 +282,7 @@ export default function Home() {
                     <div className={styles.column}>
                         <h2 className={styles.secondaryHeader}>To make peoples life better</h2>
                         <h1 className={styles.title}>Projects</h1>
-                        <motion.span 
+                        <motion.span
                             className={styles.text}
                             style={{
                                 translateY: projectsParallax
@@ -295,7 +295,7 @@ export default function Home() {
                     <div className={styles.column}>
                         <div className={styles.imageContainer}>
                             <div className={styles.imageBg} />
-                            <div className={styles.image} style={{bottom: '-100px'}}>
+                            <div className={styles.image} style={{ bottom: '-100px' }}>
                                 <Image
                                     src="/images/Projects.png"
                                     alt="Projects"
@@ -348,17 +348,17 @@ export default function Home() {
                 </div>
                 <Footer />
             </div>
-                <a 
-                    className={styles.scrollToTop}
-                    onClick={() => handleScroll('hero')}
-                >
-                    <Image 
-                        src="/icons/arrow_downward.svg"
-                        alt='scroll to top'
-                        width={20}
-                        height={20}
-                    />
-                </a>
+            <a
+                className={styles.scrollToTop}
+                onClick={() => handleScroll('hero')}
+            >
+                <Image
+                    src="/icons/arrow_downward.svg"
+                    alt='scroll to top'
+                    width={20}
+                    height={20}
+                />
+            </a>
         </>
     )
 }

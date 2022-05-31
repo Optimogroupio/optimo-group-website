@@ -36,7 +36,7 @@ export default function Mobile() {
     const [heroText, setHeroText] = useState(words[0])
 
     let index = 1;
-    
+
     useEffect(() => {
         const interval = setInterval(() => {
             if (index === words.length - 1) {
@@ -49,9 +49,9 @@ export default function Mobile() {
         }
     }, [index])
 
-    function handleScroll(id){
+    function handleScroll(id) {
         const element = document.getElementById(id)
-        element.scrollIntoView({behavior: 'smooth', block: 'center'})
+        element.scrollIntoView({ behavior: 'smooth', block: 'center' })
     }
 
     // function printScroll(){
@@ -69,15 +69,15 @@ export default function Mobile() {
         <>
             <Head>
                 <title>Optimo Group</title>
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/logo.svg" />
                 <link rel='preload' href='/fonts/TitilliumWeb-Regular.ttf' as='font' type='font/ttf' crossOrigin='anonymous' />
                 <link rel='preload' href='/fonts/TitilliumWeb-Bold.ttf' as='font' type='font/ttf' crossOrigin='anonymous' />
                 <link rel='preload' href='/fonts/TitilliumWeb-Light.ttf' as='font' type='font/ttf' crossOrigin='anonymous' />
                 <link rel='preload' href='/fonts/TitilliumWeb-SemiBold.ttf' as='font' type='font/ttf' crossOrigin='anonymous' />
                 <link rel='preload' href='/fonts/TitilliumWeb-ExtraLight.ttf' as='font' type='font/ttf' crossOrigin='anonymous' />
             </Head>
-            <motion.div 
-                className={styles.backgroundImage} 
+            <motion.div
+                className={styles.backgroundImage}
                 style={{
                     width: expandWidth,
                     height: expandHeight,
@@ -86,13 +86,13 @@ export default function Mobile() {
                     backgroundPositionY: bgPosition,
                 }}
             />
-            <motion.div 
+            <motion.div
                 className={styles.scrollDownContainer}
                 style={{
                     opacity: opacity,
                 }}
             >
-                <div 
+                <div
                     onClick={() => handleScroll('affiliateProject')}
                     className={styles.scrollDown}
                 >
@@ -112,7 +112,7 @@ export default function Mobile() {
                 {/* Hero */}
                 <div id="hero" className={styles.heroBlock}>
                     <h1 className={styles.title}>
-                        Optimal Solutions For: <br/>
+                        Optimal Solutions For: <br />
                         <span className={styles.highlight}>{heroText}</span>
                     </h1>
                     <span className={styles.text}>
@@ -121,18 +121,18 @@ export default function Mobile() {
                     </span>
                 </div>
                 {/* Affiliate Project */}
-                <motion.div 
-                    id="affiliateProject" 
+                <motion.div
+                    id="affiliateProject"
                     className={styles.affiliateProject}
                     style={{
                         opacity: affiliateProjectOpacity
                     }}
                 >
                     <div className={styles.imageContainer}>
-                        <div className={styles.imageBg}/>
+                        <div className={styles.imageBg} />
                         <div className={styles.image}>
                             <Image
-                                src="/images/Affiliate Project.png" 
+                                src="/images/Affiliate Project.png"
                                 alt="Affiliate Project"
                                 width={300}
                                 height={300}
@@ -141,28 +141,28 @@ export default function Mobile() {
                     </div>
                     <h2 className={styles.secondaryHeader}>Global 10 Projects</h2>
                     <h1 className={styles.title}> Affiliate Project </h1>
-                    <motion.span 
+                    <motion.span
                         className={styles.text}
                         style={{
                             translateX: affiliateProjectTranslate,
                             translateY: affiliateProjectTranslate
                         }}
                     >
-                        10 successful projects in the affiliate marketing igaming field. 
-                        Now we are in 21 countries and still growing {'<3 '} 
+                        10 successful projects in the affiliate marketing igaming field.
+                        Now we are in 21 countries and still growing {'<3 '}
                         We go worldwide to deliver unbelievable results for our users and partners.
                     </motion.span>
                 </motion.div>
                 {/* Affiliate Network */}
-                <motion.div 
-                    id="affiliateNetwork" 
+                <motion.div
+                    id="affiliateNetwork"
                     className={styles.affiliateNetwork}
                     style={{
                         opacity: affiliateNetworkOpacity
                     }}
                 >
                     <h1 className={styles.title}>Affiliate Network</h1>
-                    <motion.span 
+                    <motion.span
                         className={styles.text}
                         style={{
                             translateX: affiliateNetworkTranslate,
@@ -170,12 +170,12 @@ export default function Mobile() {
                         }}
                     >
                         Multi-brand affiliate management software for your website.
-                        Tailored digital solution to recruit affiliates and grow your affiliate network. 
-                        Increase Revenues. Dedicated Support. Multiple Marketing Tools. 
+                        Tailored digital solution to recruit affiliates and grow your affiliate network.
+                        Increase Revenues. Dedicated Support. Multiple Marketing Tools.
                         Real-time Insights. Real-time Data.
                     </motion.span>
                     <div className={styles.imageContainer}>
-                        <div className={styles.imageBg}/>
+                        <div className={styles.imageBg} />
                         <div className={styles.image}>
                             <Image
                                 src="/images/Affiliate Network.png"
@@ -187,28 +187,28 @@ export default function Mobile() {
                     </div>
                 </motion.div>
                 {/* Social Media */}
-                <motion.div 
-                    id="socialMedia" 
+                <motion.div
+                    id="socialMedia"
                     className={styles.socialMedia}
                     style={{
                         opacity: socialMediaOpacity
                     }}
                 >
                     <h1 className={styles.title}>Betting Social Media</h1>
-                    <motion.span 
+                    <motion.span
                         className={styles.text}
                         style={{
                             translateX: socialMediaTranslate,
                             translateY: socialMediaTranslate
                         }}
                     >
-                        Betting Social Media unifies a gambling-loving community. 
-                        Tipsters from all over the world share their predictions for various sporting events. 
+                        Betting Social Media unifies a gambling-loving community.
+                        Tipsters from all over the world share their predictions for various sporting events.
                         Customers have the opportunity to get in touch with each other, follow, discuss, engage, and more.
                         Best tipsters have a chance to win various prizes and rewards.
                     </motion.span>
                     <div className={styles.imageContainer}>
-                        <div className={styles.imageBg}/>
+                        <div className={styles.imageBg} />
                         <div className={styles.image}>
                             <Image
                                 src="/images/Betting Social Media.png"
@@ -220,8 +220,8 @@ export default function Mobile() {
                     </div>
                 </motion.div>
                 {/* Streaming Solutions */}
-                <motion.div 
-                    id="streamingSolutions" 
+                <motion.div
+                    id="streamingSolutions"
                     className={styles.streamingSolutions}
                     style={{
                         opacity: streamingSolutionsOpacity
@@ -229,19 +229,19 @@ export default function Mobile() {
                 >
                     <h2 className={styles.secondaryHeader}>Streaming Projects and Platform</h2>
                     <h1 className={styles.title}>Streaming Solutions</h1>
-                    <motion.span 
+                    <motion.span
                         className={styles.text}
                         style={{
                             translateX: streamingSolutionsTranslate,
                             translateY: streamingSolutionsTranslate
                         }}
                     >
-                        Variety of streaming solutions for companies interested in promoting their products and services. 
-                        with a large network of professional streamers, we can reach different audiences worldwide. 
+                        Variety of streaming solutions for companies interested in promoting their products and services.
+                        with a large network of professional streamers, we can reach different audiences worldwide.
                         Optimo Group owns dedicated streamers platform, {`"`}Streamers Club{`"`} to enhance business solutions.
                     </motion.span>
                     <div className={styles.imageContainer}>
-                        <div className={styles.imageBg}/>
+                        <div className={styles.imageBg} />
                         <div className={styles.image}>
                             <Image
                                 src="/images/Streaming Solutions.png"
@@ -253,8 +253,8 @@ export default function Mobile() {
                     </div>
                 </motion.div>
                 {/* Startup Incubator */}
-                <motion.div 
-                    id="startupIncubator" 
+                <motion.div
+                    id="startupIncubator"
                     className={styles.startupIncubator}
                     style={{
                         opacity: startupIncubatorOpacity
@@ -263,7 +263,7 @@ export default function Mobile() {
                     <h2 className={styles.secondaryHeader}>Create In-House</h2>
                     <h1 className={styles.title}>Startup Incubator</h1>
                     <div className={styles.imageContainer}>
-                        <div className={styles.imageBg}/>
+                        <div className={styles.imageBg} />
                         <div className={styles.image}>
                             <Image
                                 src="/images/Startup Incubator.png"
@@ -273,21 +273,21 @@ export default function Mobile() {
                             />
                         </div>
                     </div>
-                    <motion.span 
+                    <motion.span
                         className={styles.text}
                         style={{
                             translateX: startupIncubatorTranslate,
                             translateY: startupIncubatorTranslate
                         }}
                     >
-                        We assist new startups to succeed: solving some of the problems associated with mentoring, 
-                        training, and running startups by providing workspace and funding. Our Support means to 
+                        We assist new startups to succeed: solving some of the problems associated with mentoring,
+                        training, and running startups by providing workspace and funding. Our Support means to
                         take the form of access to experienced mentors with relevant area expertise.
                     </motion.span>
                 </motion.div>
                 {/* Projects */}
-                <motion.div 
-                    id="projects" 
+                <motion.div
+                    id="projects"
                     className={styles.projects}
                     style={{
                         opacity: projectsOpacity
@@ -306,7 +306,7 @@ export default function Mobile() {
                         like Marketing automation software, and crypto payment gateways.
                     </motion.span>
                     <div className={styles.imageContainer}>
-                        <div className={styles.imageBg}/>
+                        <div className={styles.imageBg} />
                         <div className={styles.image}>
                             <Image
                                 src="/images/Projects.png"
@@ -344,17 +344,17 @@ export default function Mobile() {
                     </a>
                 </div>
             </div>
-                <a 
-                    className={styles.scrollToTop}
-                    onClick={() => handleScroll('hero')}
-                >
-                    <Image 
-                        src="/icons/arrow_downward.svg"
-                        alt='scroll to top'
-                        width={20}
-                        height={20}
-                    />
-                </a>
+            <a
+                className={styles.scrollToTop}
+                onClick={() => handleScroll('hero')}
+            >
+                <Image
+                    src="/icons/arrow_downward.svg"
+                    alt='scroll to top'
+                    width={20}
+                    height={20}
+                />
+            </a>
             <Footer />
         </>
     )
